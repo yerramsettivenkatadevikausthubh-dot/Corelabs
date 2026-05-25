@@ -9,7 +9,6 @@
 <title>CORETRION™ | Advanced Processor Core</title>
 
 <meta name="description" content="CORETRION Advanced Processor Core - Indigenous Semiconductor Innovation Platform">
-<meta name="keywords" content="CORETRION, Semiconductor, FPGA, ASIC, AI Processor, RISC Architecture, Embedded Systems">
 
 <link rel="icon" href="images/coretrion-logo.png">
 
@@ -161,6 +160,7 @@ color:#3b82f6;
 display:none;
 font-size:30px;
 cursor:pointer;
+color:white;
 }
 
 /* HERO */
@@ -404,63 +404,41 @@ line-height:1.8;
 color:#94a3b8;
 }
 
-/* INTERACTIVE ARCHITECTURE */
+/* ARCHITECTURE */
 
 .architecture{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
+gap:20px;
 align-items:center;
-gap:18px;
-margin-top:50px;
 }
 
 .arch-box{
 background:#0f172a;
 border:1px solid #3b82f6;
-padding:24px 28px;
-border-radius:18px;
+padding:25px;
+border-radius:20px;
 min-width:180px;
 text-align:center;
+box-shadow:0 0 20px rgba(59,130,246,0.2);
+transition:0.3s;
 cursor:pointer;
-transition:0.4s;
-box-shadow:0 0 25px rgba(59,130,246,0.15);
-position:relative;
-overflow:hidden;
-}
-
-.arch-box::before{
-content:"";
-position:absolute;
-width:200%;
-height:200%;
-top:-50%;
-left:-50%;
-
-background:
-radial-gradient(circle,
-rgba(59,130,246,0.18),
-transparent 60%);
-
-animation:rotateGlow 8s linear infinite;
 }
 
 .arch-box:hover{
-transform:translateY(-8px) scale(1.05);
-box-shadow:0 0 40px rgba(59,130,246,0.35);
-border-color:#60a5fa;
+transform:scale(1.08);
 }
 
 .arch-line{
-width:70px;
+width:60px;
 height:4px;
 background:#3b82f6;
-box-shadow:0 0 25px #3b82f6;
-border-radius:10px;
+box-shadow:0 0 20px #3b82f6;
 }
 
 .module-display{
-margin-top:60px;
+margin-top:50px;
 background:#0f172a;
 border:1px solid #1e293b;
 border-radius:24px;
@@ -576,8 +554,6 @@ width:25%;
 background:linear-gradient(to right,#f59e0b,#f97316);
 }
 
-/* CLOCK */
-
 .clock{
 text-align:center;
 font-size:22px;
@@ -620,6 +596,18 @@ body{
 overflow-x:hidden;
 }
 
+h1{
+font-size:58px;
+}
+
+.subtitle{
+font-size:24px;
+}
+
+.section-title{
+font-size:42px;
+}
+
 .nav-links{
 display:none;
 }
@@ -628,66 +616,36 @@ display:none;
 display:block;
 }
 
-h1{
-font-size:52px;
-line-height:1.1;
-}
-
-.subtitle{
-font-size:22px;
-}
-
-.desc{
-font-size:16px;
-}
-
-.section-title{
-font-size:34px;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.architecture{
-flex-direction:column;
-}
-
-.arch-line{
-width:4px;
-height:40px;
-}
-
 .floating-chip{
 display:none;
 }
 
-.buttons{
-display:flex;
+.architecture{
 flex-direction:column;
-align-items:center;
+gap:18px;
 }
 
-.btn{
+.arch-line{
+width:4px;
+height:35px;
+}
+
+.arch-box{
 width:100%;
 max-width:320px;
-text-align:center;
-}
-
-.cursor{
-display:none;
 }
 
 .module-display{
-padding:28px;
+padding:26px;
 }
 
 .module-display h3{
-font-size:26px;
+font-size:24px;
 }
 
 .module-display p{
-font-size:15px;
+font-size:14px;
+line-height:1.8;
 }
 
 }
@@ -711,8 +669,6 @@ Initializing CORETRION Semiconductor Engine...
 </div>
 
 <div class="cursor"></div>
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -746,8 +702,6 @@ CORE<span>TRION</span>
 
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="particles">
@@ -755,11 +709,6 @@ CORE<span>TRION</span>
 <span style="left:10%;animation-delay:0s;"></span>
 <span style="left:20%;animation-delay:2s;"></span>
 <span style="left:30%;animation-delay:4s;"></span>
-<span style="left:40%;animation-delay:1s;"></span>
-<span style="left:50%;animation-delay:3s;"></span>
-<span style="left:60%;animation-delay:5s;"></span>
-<span style="left:70%;animation-delay:2s;"></span>
-<span style="left:80%;animation-delay:6s;"></span>
 
 </div>
 
@@ -783,10 +732,6 @@ Advanced Processor Core
 
 Building India’s next-generation intelligent semiconductor compute platform.
 
-CORETRION™ is an indigenous advanced processor ecosystem focused on AI acceleration,
-FPGA systems, embedded intelligence, edge computing,
-and scalable ASIC-ready architectures.
-
 </p>
 
 <div class="buttons">
@@ -805,53 +750,7 @@ View Roadmap
 
 </section>
 
-<!-- TECHNOLOGY -->
-
-<section id="technology">
-
-<div class="container">
-
-<h2 class="section-title">
-Technology Stack
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="card-content">
-<h3>⚡ RISC Architecture</h3>
-<p>High-performance scalable processor architecture.</p>
-</div>
-</div>
-
-<div class="card">
-<div class="card-content">
-<h3>⚡ GPU / SIMD Engine</h3>
-<p>Parallel acceleration for advanced compute workloads.</p>
-</div>
-</div>
-
-<div class="card">
-<div class="card-content">
-<h3>⚡ AI / ML Engine</h3>
-<p>Intelligent acceleration for AI-driven systems.</p>
-</div>
-</div>
-
-<div class="card">
-<div class="card-content">
-<h3>⚡ FPGA Validation</h3>
-<p>Real-time FPGA prototyping and validation.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- INTERACTIVE ARCHITECTURE -->
+<!-- ARCHITECTURE -->
 
 <section id="architecture">
 
@@ -904,7 +803,7 @@ Select a Module
 </h3>
 
 <p id="module-description">
-Click on any architecture block to view subsystem details.
+Click on any architecture block to explore subsystem details.
 </p>
 
 </div>
@@ -914,6 +813,31 @@ Click on any architecture block to view subsystem details.
 </section>
 
 <script>
+
+/* LOADER */
+
+window.onload = function(){
+
+setTimeout(function(){
+
+document.getElementById("loader").style.display = "none";
+
+},2000);
+
+};
+
+/* CURSOR */
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+
+cursor.style.left = e.clientX + 'px';
+cursor.style.top = e.clientY + 'px';
+
+});
+
+/* CLOCK */
 
 function showModule(module){
 
@@ -925,7 +849,7 @@ if(module === "cpu"){
 title.innerHTML = "RISC CPU Core";
 
 description.innerHTML =
-"CORETRION integrates a scalable high-performance RISC processing architecture designed for intelligent embedded computing, advanced instruction pipelines, floating point execution, multi-core scalability, and high-speed embedded processing.";
+"CORETRION integrates a scalable high-performance RISC architecture designed for embedded intelligence, floating point execution, advanced instruction pipelines, and future multi-core compute scalability.";
 
 }
 
@@ -934,7 +858,7 @@ else if(module === "cache"){
 title.innerHTML = "Cache & Memory Subsystem";
 
 description.innerHTML =
-"The cache subsystem integrates L1/L2 hierarchy, low latency memory workflows, data buffering optimization, high-speed memory transactions, and scalable embedded compute memory architecture.";
+"The cache subsystem integrates L1/L2 hierarchy, low-latency memory access, optimized buffering workflows, and scalable high-speed embedded compute memory architecture.";
 
 }
 
@@ -943,7 +867,7 @@ else if(module === "mmu"){
 title.innerHTML = "MMU / MPU Architecture";
 
 description.innerHTML =
-"CORETRION integrates MMU and MPU architecture for secure execution, memory protection workflows, RTOS integration, task isolation, and scalable intelligent compute systems.";
+"CORETRION integrates MMU and MPU architecture for memory protection, secure execution workflows, RTOS support, and intelligent embedded compute systems.";
 
 }
 
@@ -952,7 +876,7 @@ else if(module === "ai"){
 title.innerHTML = "AI / ML Accelerator";
 
 description.innerHTML =
-"The AI accelerator subsystem focuses on intelligent compute acceleration, neural compute workflows, tensor-style operations, AI inference engines, and scalable edge AI semiconductor systems.";
+"The AI accelerator subsystem focuses on intelligent compute acceleration, neural compute workflows, AI inference engines, tensor operations, and scalable edge AI semiconductor systems.";
 
 }
 
@@ -961,7 +885,7 @@ else if(module === "gpu"){
 title.innerHTML = "GPU / SIMD Engine";
 
 description.innerHTML =
-"The GPU/SIMD subsystem enables parallel compute acceleration, graphics workflows, vector operations, scientific processing, matrix acceleration, and high-performance compute applications.";
+"The GPU/SIMD subsystem enables vector compute acceleration, graphics workflows, matrix operations, scientific processing, and high-performance compute scalability.";
 
 }
 
@@ -970,4 +894,5 @@ description.innerHTML =
 </script>
 
 </body>
+
 </html>
