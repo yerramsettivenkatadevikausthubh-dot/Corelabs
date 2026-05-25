@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>CORETRION™ | Advanced Processor Core</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -25,10 +27,10 @@
     /* NAVBAR */
 
     nav{
-      width:100%;
       position:fixed;
       top:0;
       left:0;
+      width:100%;
       z-index:1000;
       background:rgba(2,6,23,0.85);
       backdrop-filter:blur(10px);
@@ -53,7 +55,8 @@
     .logo img{
       width:55px;
       height:55px;
-      border-radius:12px;
+      object-fit:contain;
+      border-radius:10px;
     }
 
     .logo h2{
@@ -72,10 +75,10 @@
     }
 
     .nav-links a{
-      color:white;
       text-decoration:none;
-      transition:0.3s;
+      color:white;
       font-weight:600;
+      transition:0.3s;
     }
 
     .nav-links a:hover{
@@ -86,18 +89,21 @@
 
     .hero{
       min-height:100vh;
+
+      background:
+      linear-gradient(rgba(2,6,23,0.82), rgba(2,6,23,0.92)),
+      url('images/coretrion-banner.png');
+
+      background-size:cover;
+      background-position:center;
+
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
+
       padding:120px 20px 80px;
 
-      background:
-      linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.92)),
-      url('https://i.imgur.com/7b1K8G5.jpeg');
-
-      background-size:cover;
-      background-position:center;
       position:relative;
     }
 
@@ -106,14 +112,17 @@
       position:absolute;
       width:100%;
       height:100%;
+
       background:
-      radial-gradient(circle at center,
+      radial-gradient(circle,
       rgba(59,130,246,0.18),
       transparent 60%);
+
       animation:pulseGlow 5s infinite;
     }
 
     @keyframes pulseGlow{
+
       0%{
         opacity:0.5;
       }
@@ -135,7 +144,7 @@
 
     .tag{
       display:inline-block;
-      padding:12px 26px;
+      padding:12px 24px;
       border:1px solid #3b82f6;
       border-radius:50px;
       color:#60a5fa;
@@ -147,8 +156,8 @@
     h1{
       font-size:100px;
       font-weight:900;
-      letter-spacing:4px;
       line-height:1;
+      letter-spacing:4px;
     }
 
     h1 span{
@@ -158,8 +167,8 @@
     .subtitle{
       margin-top:25px;
       font-size:34px;
-      color:#dbeafe;
       font-weight:700;
+      color:#dbeafe;
     }
 
     .desc{
@@ -176,19 +185,18 @@
 
     .btn{
       display:inline-block;
-      margin:12px;
+      margin:10px;
       padding:18px 40px;
       border-radius:16px;
       text-decoration:none;
       transition:0.3s;
       font-weight:bold;
-      font-size:16px;
     }
 
     .primary{
       background:#2563eb;
       color:white;
-      box-shadow:0 0 20px rgba(59,130,246,0.5);
+      box-shadow:0 0 25px rgba(59,130,246,0.45);
     }
 
     .primary:hover{
@@ -244,9 +252,9 @@
       border:1px solid #1e293b;
       border-radius:28px;
       padding:40px;
-      transition:0.4s;
       position:relative;
       overflow:hidden;
+      transition:0.4s;
     }
 
     .card::before{
@@ -256,14 +264,17 @@
       height:200%;
       top:-50%;
       left:-50%;
+
       background:
       radial-gradient(circle,
       rgba(59,130,246,0.12),
       transparent 60%);
+
       animation:rotate 8s linear infinite;
     }
 
     @keyframes rotate{
+
       from{
         transform:rotate(0deg);
       }
@@ -386,6 +397,7 @@
     }
 
     @keyframes pulse{
+
       0%{
         opacity:0.6;
       }
@@ -405,12 +417,12 @@
     }
 
     .fpga{
-      width:75%;
+      width:76%;
       background:linear-gradient(to right,#06b6d4,#3b82f6);
     }
 
     .ai{
-      width:65%;
+      width:64%;
       background:linear-gradient(to right,#8b5cf6,#3b82f6);
     }
 
@@ -471,9 +483,14 @@
       .nav-links{
         display:none;
       }
+
+      .hero{
+        background-position:center;
+      }
     }
 
   </style>
+
 </head>
 
 <body>
@@ -486,7 +503,7 @@
 
       <div class="logo">
 
-        <img src="https://i.imgur.com/nN9XH8x.png">
+        <img src="images/coretrion-logo.png">
 
         <h2>
           CORE<span>TRION</span>
@@ -495,10 +512,12 @@
       </div>
 
       <div class="nav-links">
+
         <a href="#">Home</a>
         <a href="#technology">Technology</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#status">Status</a>
+
       </div>
 
     </div>
@@ -524,9 +543,13 @@
       </div>
 
       <p class="desc">
+
         Building India’s next-generation intelligent semiconductor compute platform.
+
         CORETRION™ is an indigenous advanced processor ecosystem focused on AI acceleration,
-        FPGA systems, embedded intelligence, edge computing, and scalable ASIC-ready architectures.
+        FPGA systems, embedded intelligence, edge computing,
+        and scalable ASIC-ready architectures.
+
       </p>
 
       <div class="buttons">
@@ -564,41 +587,57 @@
 
         <div class="card">
           <div class="card-content">
+
             <div class="icon">⚡</div>
+
             <h3>RISC Architecture</h3>
+
             <p>
               High-performance scalable processor architecture.
             </p>
+
           </div>
         </div>
 
         <div class="card">
           <div class="card-content">
+
             <div class="icon">⚡</div>
+
             <h3>GPU / SIMD</h3>
+
             <p>
               Parallel acceleration for advanced compute workloads.
             </p>
+
           </div>
         </div>
 
         <div class="card">
           <div class="card-content">
+
             <div class="icon">⚡</div>
+
             <h3>AI / ML Engine</h3>
+
             <p>
               Intelligent acceleration for AI-driven applications.
             </p>
+
           </div>
         </div>
 
         <div class="card">
           <div class="card-content">
+
             <div class="icon">⚡</div>
+
             <h3>FPGA Validation</h3>
+
             <p>
               Real-time FPGA prototyping and verification workflow.
             </p>
+
           </div>
         </div>
 
@@ -690,8 +729,13 @@
         <div class="status-card">
 
           <div class="status-header">
+
             <span>RTL DESIGN</span>
-            <span class="active">ACTIVE</span>
+
+            <span class="active">
+              ACTIVE
+            </span>
+
           </div>
 
           <div class="progress-bar">
@@ -707,8 +751,13 @@
         <div class="status-card">
 
           <div class="status-header">
+
             <span>FPGA VALIDATION</span>
-            <span class="active">RUNNING</span>
+
+            <span class="active">
+              RUNNING
+            </span>
+
           </div>
 
           <div class="progress-bar">
@@ -724,8 +773,13 @@
         <div class="status-card">
 
           <div class="status-header">
+
             <span>AI ACCELERATOR</span>
-            <span class="active">DEVELOPMENT</span>
+
+            <span class="active">
+              DEVELOPMENT
+            </span>
+
           </div>
 
           <div class="progress-bar">
@@ -741,8 +795,13 @@
         <div class="status-card">
 
           <div class="status-header">
+
             <span>PHYSICAL DESIGN</span>
-            <span class="planned">PLANNED</span>
+
+            <span class="planned">
+              PLANNED
+            </span>
+
           </div>
 
           <div class="progress-bar">
@@ -765,7 +824,7 @@
 
   <footer>
 
-    <img src="https://i.imgur.com/nN9XH8x.png">
+    <img src="images/coretrion-logo.png">
 
     <h2>
       CORE<span>TRION</span>
@@ -776,9 +835,11 @@
     </p>
 
     <p>
+
       CORETRION™ is an indigenous semiconductor and intelligent computing initiative
-      focused on scalable processor architectures, AI acceleration,
-      FPGA systems and future ASIC-ready technologies.
+      focused on scalable processor architectures,
+      AI acceleration, FPGA systems and future ASIC-ready technologies.
+
     </p>
 
     <p>
