@@ -1,40 +1,288 @@
-export default function CoretrionWebsite() { return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Hero Section */} <section className="relative overflow-hidden bg-gradient-to-br from-black via-slate-950 to-blue-950 py-24 px-6"> <div className="max-w-7xl mx-auto text-center"> <div className="inline-block px-4 py-2 rounded-full border border-blue-500 text-blue-400 text-sm mb-6"> 🇮🇳 Designed in India • Built for the Future </div>
+export default function CoretrionWebsite() { const techStack = [ 'RISC Processor Architecture', 'GPU / SIMD Acceleration', 'AI / ML Compute Engine', 'FPGA Validation Platform', 'RTOS Integration', 'ASIC Scalability', 'Cache / MMU / MPU', 'High-Speed Interfaces', 'Embedded Edge Computing' ]
 
-<h1 className="text-6xl md:text-8xl font-extrabold tracking-tight mb-6">
+const applications = [ 'AI / ML', 'Robotics', 'Edge Computing', 'Industrial Automation', 'IoT Platforms', 'Embedded Systems', 'Research Platforms', 'High-Performance Computing' ]
+
+const roadmap = [ { title: 'Jan 2026 – Jun 2026', subtitle: 'Frontend Design', details: 'Processor architecture, RTL design, subsystem integration, simulation, verification, FPGA validation, cache/MMU integration, AI acceleration architecture.' }, { title: 'Jul 2026 – Dec 2026', subtitle: 'Physical Design', details: 'Synthesis, floorplanning, placement & routing, clock tree synthesis, timing optimization, STA and power analysis.' }, { title: '2027', subtitle: 'ASIC Readiness', details: 'Signoff verification, DRC/LVS closure, GDSII generation, MPW tapeout preparation and fabrication planning.' }, { title: 'Future Vision', subtitle: 'Silicon & Beyond', details: 'Fabrication roadmap, packaging, testing, validation and future FinFET-based scalable semiconductor ecosystem.' } ]
+
+const projectStatus = [ ['RTL Design', 'In Progress'], ['FPGA Validation', 'Ongoing'], ['AI Accelerator', 'Under Development'], ['Physical Design', 'Planned'], ['ASIC Flow', 'Roadmap Stage'], ['Tapeout Planning', 'Future Phase'] ]
+
+return ( <div className="min-h-screen bg-black text-white overflow-hidden font-sans"> {/* HERO SECTION */} <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-slate-950 to-blue-950 px-6"> <div className="absolute inset-0 opacity-20"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.3),transparent_60%)]"></div> </div>
+
+<div className="relative z-10 max-w-7xl mx-auto text-center">
+      <div className="inline-block px-6 py-3 rounded-full border border-blue-500 text-blue-400 text-sm tracking-widest mb-8 animate-pulse">
+        🇮🇳 DESIGNED IN INDIA • BUILT FOR THE FUTURE
+      </div>
+
+      <h1 className="text-7xl md:text-9xl font-extrabold tracking-tight mb-6">
         <span className="text-white">CORE</span>
         <span className="text-blue-500">TRION</span>
       </h1>
 
-      <p className="text-2xl md:text-3xl text-slate-300 mb-4 font-semibold">
+      <p className="text-2xl md:text-4xl font-semibold text-slate-200 mb-6">
         Advanced Processor Core
       </p>
 
-      <p className="max-w-3xl mx-auto text-slate-400 text-lg leading-relaxed mb-10">
-        Next-generation indigenous semiconductor platform focused on AI acceleration,
-        FPGA systems, embedded intelligence, edge computing, and scalable ASIC-ready processor architectures.
+      <p className="max-w-4xl mx-auto text-slate-400 text-lg md:text-xl leading-relaxed mb-10">
+        Building India’s Next-Generation Intelligent Semiconductor Compute Platform.
+        CORETRION™ is an indigenous advanced processor ecosystem focused on AI acceleration,
+        FPGA systems, embedded intelligence, edge computing, and scalable ASIC-ready architectures.
       </p>
 
-      <div className="flex flex-wrap justify-center gap-4">
-        <button className="bg-blue-600 hover:bg-blue-700 transition px-8 py-4 rounded-2xl font-semibold shadow-2xl">
+      <div className="flex flex-wrap justify-center gap-5 mb-16">
+        <button className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 px-10 py-4 rounded-2xl font-semibold shadow-2xl hover:scale-105">
           Explore Architecture
         </button>
 
-        <button className="border border-slate-600 hover:border-blue-500 transition px-8 py-4 rounded-2xl font-semibold">
+        <button className="border border-slate-700 hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300 px-10 py-4 rounded-2xl font-semibold hover:scale-105">
           View Roadmap
+        </button>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {[
+          'AI Accelerators',
+          'FPGA Validation',
+          'GPU / SIMD',
+          'ASIC Roadmap'
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl py-6 px-4 hover:border-blue-500 transition"
+          >
+            <p className="font-semibold text-slate-200">{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* TECHNOLOGY STACK */}
+  <section className="py-28 px-6 bg-slate-950">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl md:text-6xl font-bold mb-5">
+          Technology Stack
+        </h2>
+        <p className="text-slate-400 max-w-3xl mx-auto text-lg">
+          CORETRION integrates advanced semiconductor technologies for intelligent computing ecosystems.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {techStack.map((item, index) => (
+          <div
+            key={index}
+            className="group bg-black border border-slate-800 hover:border-blue-500 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-500/20 hover:shadow-2xl"
+          >
+            <div className="text-5xl mb-5 text-blue-500 group-hover:scale-110 transition">
+              ⚡
+            </div>
+            <h3 className="text-2xl font-semibold text-slate-100">
+              {item}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* PROCESSOR ARCHITECTURE */}
+  <section className="py-28 px-6 bg-black">
+    <div className="max-w-7xl mx-auto text-center">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6">
+        Processor Architecture
+      </h2>
+
+      <p className="text-slate-400 max-w-4xl mx-auto text-lg leading-relaxed mb-16">
+        CORETRION™ integrates advanced RISC-based processing, AI acceleration,
+        cache/MMU architecture, FPGA validation workflows, and scalable ASIC-ready design methodologies.
+      </p>
+
+      <div className="bg-slate-950 border border-slate-800 rounded-[40px] p-10 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            'RISC Compute Core',
+            'GPU / SIMD Engine',
+            'AI Accelerator',
+            'Cache & Memory Subsystem',
+            'RTOS Integration',
+            'High-Speed Peripheral Interfaces'
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-black border border-slate-800 rounded-2xl py-10 px-6 hover:border-blue-500 transition"
+            >
+              <p className="text-xl font-semibold text-slate-100">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ROADMAP */}
+  <section className="py-28 px-6 bg-slate-950">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl md:text-6xl font-bold mb-5">
+          Semiconductor Roadmap
+        </h2>
+        <p className="text-slate-400 text-lg">
+          From RTL architecture to future silicon fabrication.
+        </p>
+      </div>
+
+      <div className="space-y-10">
+        {roadmap.map((item, index) => (
+          <div
+            key={index}
+            className="relative bg-black border border-slate-800 rounded-3xl p-10 hover:border-blue-500 transition-all duration-300"
+          >
+            <div className="absolute top-0 left-0 h-full w-2 bg-blue-500 rounded-l-3xl"></div>
+
+            <p className="text-blue-400 font-semibold mb-2 text-lg">
+              {item.title}
+            </p>
+
+            <h3 className="text-3xl font-bold mb-4">
+              {item.subtitle}
+            </h3>
+
+            <p className="text-slate-400 leading-relaxed text-lg">
+              {item.details}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* LIVE STATUS */}
+  <section className="py-28 px-6 bg-black">
+    <div className="max-w-5xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-5xl font-bold mb-5">
+          Live Project Status
+        </h2>
+        <p className="text-slate-400 text-lg">
+          Current development activities across the CORETRION ecosystem.
+        </p>
+      </div>
+
+      <div className="overflow-hidden rounded-3xl border border-slate-800">
+        <table className="w-full">
+          <thead className="bg-slate-950">
+            <tr>
+              <th className="text-left py-6 px-8 text-blue-400 text-lg">Module</th>
+              <th className="text-left py-6 px-8 text-blue-400 text-lg">Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {projectStatus.map((row, index) => (
+              <tr
+                key={index}
+                className="border-t border-slate-800 hover:bg-slate-950 transition"
+              >
+                <td className="py-6 px-8 text-slate-200">{row[0]}</td>
+                <td className="py-6 px-8 text-green-400 font-medium">{row[1]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {/* APPLICATIONS */}
+  <section className="py-28 px-6 bg-slate-950">
+    <div className="max-w-7xl mx-auto text-center">
+      <h2 className="text-5xl md:text-6xl font-bold mb-16">
+        Applications
+      </h2>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {applications.map((item, index) => (
+          <div
+            key={index}
+            className="bg-black border border-slate-800 rounded-3xl py-12 px-5 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300"
+          >
+            <p className="text-xl font-semibold text-slate-100">
+              {item}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CONTACT / LINKS */}
+  <section className="py-24 px-6 bg-black border-t border-slate-800">
+    <div className="max-w-5xl mx-auto text-center">
+      <h2 className="text-5xl font-bold mb-6">
+        Connect With CORETRION
+      </h2>
+
+      <p className="text-slate-400 text-lg mb-12 max-w-3xl mx-auto">
+        Open to semiconductor collaborations, FPGA/ASIC research,
+        deep-tech innovation ecosystems, and advanced processor architecture initiatives.
+      </p>
+
+      <div className="flex flex-wrap justify-center gap-5">
+        <a
+          href="https://github.com"
+          className="bg-blue-600 hover:bg-blue-700 transition px-8 py-4 rounded-2xl font-semibold"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://linkedin.com"
+          className="border border-slate-700 hover:border-blue-500 hover:bg-blue-500/10 transition px-8 py-4 rounded-2xl font-semibold"
+        >
+          LinkedIn
+        </a>
+
+        <button className="border border-slate-700 hover:border-blue-500 hover:bg-blue-500/10 transition px-8 py-4 rounded-2xl font-semibold">
+          Contact
         </button>
       </div>
     </div>
   </section>
 
-  {/* Technology Stack */}
-  <section className="py-20 px-6 bg-slate-950">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl font-bold mb-4">Technology Stack</h2>
-        <p className="text-slate-400 max-w-2xl mx-auto">
-          CORETRION integrates advanced semiconductor and intelligent computing technologies.
-        </p>
+  {/* FOOTER */}
+  <footer className="py-14 px-6 bg-black border-t border-slate-900">
+    <div className="max-w-7xl mx-auto text-center">
+      <h3 className="text-4xl font-extrabold mb-4 tracking-wide">
+        CORE<span className="text-blue-500">TRION</span>
+      </h3>
+
+      <p className="text-slate-400 text-lg mb-5">
+        Advanced Processor Core
+      </p>
+
+      <p className="text-slate-500 max-w-3xl mx-auto leading-relaxed mb-8">
+        CORETRION™ is an indigenous semiconductor and intelligent computing initiative focused on scalable processor architectures,
+        AI acceleration, FPGA systems, and future ASIC-ready technologies.
+      </p>
+
+      <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-600 mb-6">
+        <span>#Semiconductor</span>
+        <span>#VLSI</span>
+        <span>#FPGA</span>
+        <span>#ASIC</span>
+        <span>#AI</span>
+        <span>#ProcessorArchitecture</span>
       </div>
+
+      <p className="text-slate-700 text-sm">
+        © 2026 CORETRION™ • Designed in India • Built for the Future
+      </p>
+    </div>
+  </footer>
+</div>
+
+) }      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
