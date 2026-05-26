@@ -16,10 +16,6 @@
 
 <style>
 
-/* ========================= */
-/* GLOBAL */
-/* ========================= */
-
 *{
 margin:0;
 padding:0;
@@ -34,6 +30,8 @@ color:white;
 overflow-x:hidden;
 }
 
+/* BACKGROUND */
+
 .grid-bg{
 position:fixed;
 width:100%;
@@ -45,9 +43,7 @@ background-size:40px 40px;
 z-index:-2;
 }
 
-/* ========================= */
 /* CURSOR */
-/* ========================= */
 
 .cursor{
 width:18px;
@@ -61,9 +57,7 @@ z-index:9999;
 box-shadow:0 0 25px #3b82f6;
 }
 
-/* ========================= */
 /* LOADER */
-/* ========================= */
 
 #loader{
 position:fixed;
@@ -96,9 +90,7 @@ from{transform:rotate(0deg);}
 to{transform:rotate(360deg);}
 }
 
-/* ========================= */
 /* NAVBAR */
-/* ========================= */
 
 nav{
 position:fixed;
@@ -156,9 +148,7 @@ transition:0.3s;
 color:#3b82f6;
 }
 
-/* ========================= */
 /* HERO */
-/* ========================= */
 
 .hero{
 min-height:100vh;
@@ -257,10 +247,6 @@ color:white;
 box-shadow:0 0 35px rgba(59,130,246,0.4);
 }
 
-.primary:hover{
-transform:translateY(-5px);
-}
-
 .secondary{
 border:1px solid #3b82f6;
 color:white;
@@ -270,9 +256,7 @@ color:white;
 background:#3b82f6;
 }
 
-/* ========================= */
-/* SECTIONS */
-/* ========================= */
+/* SECTION */
 
 section{
 padding:110px 20px;
@@ -298,44 +282,7 @@ line-height:1.9;
 color:#94a3b8;
 }
 
-/* ========================= */
-/* CARDS */
-/* ========================= */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.card{
-background:#0f172a;
-border:1px solid #1e293b;
-border-radius:24px;
-padding:40px;
-transition:0.4s;
-overflow:hidden;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#3b82f6;
-box-shadow:0 0 40px rgba(59,130,246,0.35);
-}
-
-.card h3{
-font-size:25px;
-margin-bottom:14px;
-}
-
-.card p{
-line-height:1.8;
-color:#94a3b8;
-}
-
-/* ========================= */
 /* STATS */
-/* ========================= */
 
 .stats{
 display:grid;
@@ -362,9 +309,39 @@ margin-top:10px;
 color:#94a3b8;
 }
 
-/* ========================= */
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#0f172a;
+border:1px solid #1e293b;
+border-radius:24px;
+padding:40px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#3b82f6;
+box-shadow:0 0 40px rgba(59,130,246,0.35);
+}
+
+.card h3{
+font-size:25px;
+margin-bottom:14px;
+}
+
+.card p{
+line-height:1.8;
+color:#94a3b8;
+}
+
 /* ARCHITECTURE */
-/* ========================= */
 
 .architecture{
 display:flex;
@@ -411,92 +388,7 @@ color:#60a5fa;
 margin-bottom:20px;
 }
 
-/* ========================= */
-/* TERMINAL */
-/* ========================= */
-
-.terminal{
-background:black;
-border:1px solid #3b82f6;
-border-radius:20px;
-padding:35px;
-}
-
-.terminal-line{
-margin:12px 0;
-color:#22c55e;
-}
-
-/* ========================= */
-/* ROADMAP */
-/* ========================= */
-
-.roadmap{
-display:flex;
-flex-direction:column;
-gap:30px;
-}
-
-.roadmap-card{
-background:#0f172a;
-border-left:5px solid #3b82f6;
-padding:35px;
-border-radius:18px;
-}
-
-/* ========================= */
-/* STATUS */
-/* ========================= */
-
-.status-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.status-card{
-background:#0f172a;
-padding:35px;
-border-radius:20px;
-border:1px solid #1e293b;
-}
-
-.progress-bar{
-width:100%;
-height:10px;
-background:#1e293b;
-border-radius:20px;
-overflow:hidden;
-margin:20px 0;
-}
-
-.progress{
-height:100%;
-}
-
-.rtl{
-width:88%;
-background:linear-gradient(to right,#2563eb,#38bdf8);
-}
-
-.fpga{
-width:76%;
-background:linear-gradient(to right,#06b6d4,#3b82f6);
-}
-
-.ai{
-width:64%;
-background:linear-gradient(to right,#8b5cf6,#3b82f6);
-}
-
-.pd{
-width:25%;
-background:linear-gradient(to right,#f59e0b,#f97316);
-}
-
-/* ========================= */
-/* DIAGRAMS */
-/* ========================= */
+/* DIAGRAM GRID */
 
 .diagram-grid{
 display:grid;
@@ -547,47 +439,88 @@ background:#2563eb;
 border:none;
 border-radius:14px;
 color:white;
-cursor:pointer;
 font-family:'Orbitron',sans-serif;
-}
-
-/* ========================= */
-/* MODAL */
-/* ========================= */
-
-.modal{
-display:none;
-position:fixed;
-z-index:100000;
-padding-top:60px;
-left:0;
-top:0;
-width:100%;
-height:100%;
-overflow:auto;
-background:rgba(0,0,0,0.95);
-}
-
-.modal-content{
-margin:auto;
-display:block;
-max-width:92%;
-max-height:90vh;
-border-radius:20px;
-}
-
-.close-modal{
-position:absolute;
-top:25px;
-right:40px;
-color:white;
-font-size:50px;
 cursor:pointer;
 }
 
-/* ========================= */
+/* TERMINAL */
+
+.terminal{
+background:black;
+border:1px solid #3b82f6;
+border-radius:20px;
+padding:35px;
+}
+
+.terminal-line{
+margin:12px 0;
+color:#22c55e;
+}
+
+/* ROADMAP */
+
+.roadmap{
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.roadmap-card{
+background:#0f172a;
+border-left:5px solid #3b82f6;
+padding:35px;
+border-radius:18px;
+}
+
+/* STATUS */
+
+.status-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.status-card{
+background:#0f172a;
+padding:35px;
+border-radius:20px;
+border:1px solid #1e293b;
+}
+
+.progress-bar{
+width:100%;
+height:10px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+margin:20px 0;
+}
+
+.progress{
+height:100%;
+}
+
+.rtl{
+width:88%;
+background:linear-gradient(to right,#2563eb,#38bdf8);
+}
+
+.fpga{
+width:76%;
+background:linear-gradient(to right,#06b6d4,#3b82f6);
+}
+
+.ai{
+width:64%;
+background:linear-gradient(to right,#8b5cf6,#3b82f6);
+}
+
+.pd{
+width:25%;
+background:linear-gradient(to right,#f59e0b,#f97316);
+}
+
 /* FAMILY */
-/* ========================= */
 
 .family-grid{
 display:grid;
@@ -609,9 +542,7 @@ margin-bottom:12px;
 color:#3b82f6;
 }
 
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 
 footer{
 padding:90px 20px;
@@ -653,9 +584,39 @@ text-decoration:none;
 color:white;
 }
 
-/* ========================= */
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+z-index:100000;
+padding-top:60px;
+left:0;
+top:0;
+width:100%;
+height:100%;
+overflow:auto;
+background:rgba(0,0,0,0.95);
+}
+
+.modal-content{
+margin:auto;
+display:block;
+max-width:92%;
+max-height:90vh;
+border-radius:20px;
+}
+
+.close-modal{
+position:absolute;
+top:25px;
+right:40px;
+color:white;
+font-size:50px;
+cursor:pointer;
+}
+
 /* MOBILE */
-/* ========================= */
 
 @media(max-width:768px){
 
@@ -714,9 +675,7 @@ display:none;
 
 <div class="cursor"></div>
 
-<!-- ========================= -->
 <!-- NAVBAR -->
-<!-- ========================= -->
 
 <nav>
 
@@ -747,9 +706,7 @@ CORE<span>TRION</span>
 
 </nav>
 
-<!-- ========================= -->
 <!-- HERO -->
-<!-- ========================= -->
 
 <section class="hero">
 
@@ -789,9 +746,7 @@ Processor Architecture
 
 </section>
 
-<!-- ========================= -->
 <!-- STATS -->
-<!-- ========================= -->
 
 <section>
 
@@ -829,9 +784,7 @@ CORETRION Statistics
 
 </section>
 
-<!-- ========================= -->
 <!-- TECHNOLOGY -->
-<!-- ========================= -->
 
 <section id="technology">
 
@@ -869,9 +822,7 @@ Technology Stack
 
 </section>
 
-<!-- ========================= -->
 <!-- INTERACTIVE ARCHITECTURE -->
-<!-- ========================= -->
 
 <section id="architecture">
 
@@ -933,9 +884,7 @@ Click any subsystem above to explore CORETRION internals.
 
 </section>
 
-<!-- ========================= -->
 <!-- PROCESSOR DIAGRAMS -->
-<!-- ========================= -->
 
 <section id="processor-diagrams">
 
@@ -946,10 +895,12 @@ CORETRION Processor Architecture
 </h2>
 
 <p class="section-desc">
-Complete processor subsystem architecture including datapath, GPU compute, hazard detection, interrupt handling and AI acceleration.
+Complete processor subsystem architecture including datapath, GPU compute, branch prediction, hazard detection and interrupt handling.
 </p>
 
 <div class="diagram-grid">
+
+<!-- DATAPATH -->
 
 <div class="diagram-card">
 
@@ -960,7 +911,7 @@ Complete processor subsystem architecture including datapath, GPU compute, hazar
 <h3>Processor Datapath</h3>
 
 <p>
-Complete datapath architecture with ALU, MMU and SIMD integration.
+CORETRION datapath architecture integrating ALU, SIMD, MMU and writeback logic.
 </p>
 
 <button onclick="openModal('images/datapath.png')">
@@ -971,19 +922,21 @@ View Diagram
 
 </div>
 
+<!-- GPU -->
+
 <div class="diagram-card">
 
-<img src="images/gpu-architecture.png">
+<img src="images/gpu_architecture.png">
 
 <div class="diagram-content">
 
-<h3>GPU Architecture</h3>
+<h3>GPU Compute Architecture</h3>
 
 <p>
-Parallel compute subsystem integrating GPU cores and memory scheduler.
+GPU cores, schedulers, VRAM hierarchy and SIMD parallel execution.
 </p>
 
-<button onclick="openModal('images/gpu-architecture.png')">
+<button onclick="openModal('images/gpu_architecture.png')">
 View Diagram
 </button>
 
@@ -991,19 +944,21 @@ View Diagram
 
 </div>
 
+<!-- BRANCH -->
+
 <div class="diagram-card">
 
-<img src="images/branch-prediction.png">
+<img src="images/branch_prediction.png">
 
 <div class="diagram-content">
 
-<h3>Branch Prediction</h3>
+<h3>Branch Prediction Unit</h3>
 
 <p>
-Speculative execution architecture for efficient instruction flow.
+Speculative execution and branch prediction control subsystem.
 </p>
 
-<button onclick="openModal('images/branch-prediction.png')">
+<button onclick="openModal('images/branch_prediction.png')">
 View Diagram
 </button>
 
@@ -1011,19 +966,21 @@ View Diagram
 
 </div>
 
+<!-- HAZARD -->
+
 <div class="diagram-card">
 
-<img src="images/hazard-detection.png">
+<img src="images/hazard_unit.png">
 
 <div class="diagram-content">
 
-<h3>Hazard Detection</h3>
+<h3>Hazard Detection Unit</h3>
 
 <p>
-Pipeline stall, flush and forwarding control logic.
+Pipeline forwarding, flush and hazard management architecture.
 </p>
 
-<button onclick="openModal('images/hazard-detection.png')">
+<button onclick="openModal('images/hazard_unit.png')">
 View Diagram
 </button>
 
@@ -1031,39 +988,43 @@ View Diagram
 
 </div>
 
-<div class="diagram-card">
-
-<img src="images/interrupt-handling.png">
-
-<div class="diagram-content">
-
-<h3>Interrupt Handling</h3>
-
-<p>
-Interrupt controller and context-switching architecture.
-</p>
-
-<button onclick="openModal('images/interrupt-handling.png')">
-View Diagram
-</button>
-
-</div>
-
-</div>
+<!-- KERNEL -->
 
 <div class="diagram-card">
 
-<img src="images/kernel-mode.png">
+<img src="images/kernel_user_mode.png">
 
 <div class="diagram-content">
 
 <h3>Kernel / User Mode</h3>
 
 <p>
-Privilege-level management and secure processor execution.
+Privilege management and secure execution subsystem.
 </p>
 
-<button onclick="openModal('images/kernel-mode.png')">
+<button onclick="openModal('images/kernel_user_mode.png')">
+View Diagram
+</button>
+
+</div>
+
+</div>
+
+<!-- OVERALL -->
+
+<div class="diagram-card">
+
+<img src="images/coretrion_overall.png">
+
+<div class="diagram-content">
+
+<h3>CORETRION Overall Architecture</h3>
+
+<p>
+Complete high-level processor architecture integrating AI, GPU, DMA and memory systems.
+</p>
+
+<button onclick="openModal('images/coretrion_overall.png')">
 View Diagram
 </button>
 
@@ -1077,9 +1038,7 @@ View Diagram
 
 </section>
 
-<!-- ========================= -->
 <!-- TERMINAL -->
-<!-- ========================= -->
 
 <section>
 
@@ -1107,15 +1066,17 @@ Semiconductor Terminal
 [RUNNING] AI Accelerator Development
 </div>
 
+<div class="terminal-line">
+[RUNNING] GPU Compute Scheduler
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- ========================= -->
 <!-- ROADMAP -->
-<!-- ========================= -->
 
 <section id="roadmap">
 
@@ -1130,14 +1091,14 @@ Semiconductor Roadmap
 <div class="roadmap-card">
 <h3>2026</h3>
 <p>
-RTL Design, Verification and FPGA Validation.
+Frontend RTL design, verification and FPGA validation.
 </p>
 </div>
 
 <div class="roadmap-card">
 <h3>2027</h3>
 <p>
-ASIC Physical Design, GDSII and Fabrication Readiness.
+ASIC physical design, GDSII generation and fabrication readiness.
 </p>
 </div>
 
@@ -1147,9 +1108,7 @@ ASIC Physical Design, GDSII and Fabrication Readiness.
 
 </section>
 
-<!-- ========================= -->
 <!-- STATUS -->
-<!-- ========================= -->
 
 <section id="status">
 
@@ -1207,9 +1166,7 @@ Live Project Status
 
 </section>
 
-<!-- ========================= -->
 <!-- FAMILY -->
-<!-- ========================= -->
 
 <section>
 
@@ -1223,22 +1180,22 @@ CORETRION Family
 
 <div class="family-card">
 <h3>EDGE</h3>
-<p>Low-power edge compute platform.</p>
+<p>Low-power edge compute systems.</p>
 </div>
 
 <div class="family-card">
 <h3>AI</h3>
-<p>AI/ML intelligent acceleration platform.</p>
+<p>Dedicated AI acceleration platform.</p>
 </div>
 
 <div class="family-card">
 <h3>RT</h3>
-<p>Real-time deterministic processor systems.</p>
+<p>Real-time deterministic systems.</p>
 </div>
 
 <div class="family-card">
 <h3>HPC</h3>
-<p>High-performance parallel computing systems.</p>
+<p>High-performance compute architecture.</p>
 </div>
 
 </div>
@@ -1247,9 +1204,7 @@ CORETRION Family
 
 </section>
 
-<!-- ========================= -->
 <!-- FOOTER -->
-<!-- ========================= -->
 
 <footer>
 
@@ -1281,9 +1236,7 @@ CORETRION™ is an indigenous semiconductor and intelligent compute initiative f
 
 </footer>
 
-<!-- ========================= -->
 <!-- MODAL -->
-<!-- ========================= -->
 
 <div id="diagramModal" class="modal">
 
@@ -1295,9 +1248,7 @@ CORETRION™ is an indigenous semiconductor and intelligent compute initiative f
 
 </div>
 
-<!-- ========================= -->
 <!-- JAVASCRIPT -->
-<!-- ========================= -->
 
 <script>
 
@@ -1337,7 +1288,6 @@ cursor.style.top = e.clientY + 'px';
 function showModule(module){
 
 const title = document.getElementById("module-title");
-
 const description = document.getElementById("module-description");
 
 if(module === "cpu"){
@@ -1345,7 +1295,7 @@ if(module === "cpu"){
 title.innerHTML = "RISC CPU Core";
 
 description.innerHTML =
-"CORETRION integrates scalable high-performance RISC architecture with advanced pipeline execution and embedded intelligence.";
+"CORETRION scalable RISC processor architecture with pipeline execution and intelligent compute acceleration.";
 
 }
 
@@ -1354,7 +1304,7 @@ else if(module === "cache"){
 title.innerHTML = "Cache & Memory Subsystem";
 
 description.innerHTML =
-"Multi-level L1/L2 cache hierarchy optimized for low latency and high bandwidth execution.";
+"Optimized L1/L2 cache hierarchy designed for low latency and high bandwidth.";
 
 }
 
@@ -1363,7 +1313,7 @@ else if(module === "mmu"){
 title.innerHTML = "MMU / MPU";
 
 description.innerHTML =
-"Advanced memory protection subsystem with RTOS-ready virtualization and privilege management.";
+"Advanced memory management and protection subsystem with RTOS compatibility.";
 
 }
 
@@ -1372,7 +1322,7 @@ else if(module === "ai"){
 title.innerHTML = "AI / ML Accelerator";
 
 description.innerHTML =
-"Dedicated tensor and AI acceleration engines for neural compute workloads.";
+"Dedicated tensor acceleration architecture for neural compute workloads.";
 
 }
 
@@ -1381,13 +1331,13 @@ else if(module === "gpu"){
 title.innerHTML = "GPU / SIMD Engine";
 
 description.innerHTML =
-"Parallel vector compute engine supporting SIMD execution and GPU acceleration.";
+"Parallel SIMD and GPU acceleration subsystem for high-performance compute.";
 
 }
 
 }
 
-/* IMAGE MODAL */
+/* MODAL */
 
 function openModal(imageSrc){
 
