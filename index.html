@@ -498,57 +498,87 @@ color:var(--muted);
 
 }
 
-/* ========================= */
-/* STATS */
-/* ========================= */
+<!-- ========================= -->
+<!-- STATS -->
+<!-- ========================= -->
 
-.stats-grid{
+<section>
 
-display:grid;
-grid-template-columns:repeat(4,1fr);
+<div class="container">
 
-gap:24px;
+<h2 class="section-title">
+CORETRION <span>Statistics</span>
+</h2>
 
-}
+<p class="section-desc">
 
-.stat-card{
+Live animated CORETRION architecture statistics showcasing current processor development progress, subsystem integration and semiconductor roadmap targets.
 
-background:var(--card);
+</p>
 
-padding:36px 20px;
+<div class="stats-grid">
 
-border-radius:26px;
+<!-- RTL MODULES -->
 
-border:1px solid var(--border);
+<div class="stat-card">
 
-text-align:center;
+<h2 class="counter" data-target="48">
+0
+</h2>
 
-transition:0.4s;
+<p>
+RTL Modules
+</p>
 
-}
+</div>
 
-.stat-card:hover{
+<!-- PIPELINE STAGES -->
 
-transform:translateY(-10px);
+<div class="stat-card">
 
-box-shadow:0 0 40px rgba(59,130,246,0.25);
+<h2 class="counter" data-target="5">
+0
+</h2>
 
-}
+<p>
+Pipeline Stages
+</p>
 
-.stat-card h2{
+</div>
 
-font-size:48px;
+<!-- PERIPHERALS -->
 
-color:var(--secondary);
+<div class="stat-card">
 
-margin-bottom:12px;
+<h2 class="counter" data-target="12">
+0
+</h2>
 
-}
+<p>
+Integrated Peripherals
+</p>
 
-.stat-card p{
-color:var(--muted);
-}
+</div>
 
+<!-- ASIC TARGET -->
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="2027">
+0
+</h2>
+
+<p>
+ASIC Goal
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 /* ========================= */
 /* GRID */
 /* ========================= */
