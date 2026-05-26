@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CORETRION™ | Advanced Processor Core</title>
+<title>CORETRION X1 | Advanced AI Processor Architecture</title>
 
-<meta name="description" content="CORETRION Advanced Processor Core - Indigenous Semiconductor Innovation Platform">
+<meta name="description" content="CORETRION X1 Advanced AI Accelerated Processor Architecture">
 
 <link rel="icon" href="images/coretrion-logo.png">
 
@@ -148,6 +148,13 @@ transition:0.3s;
 color:#3b82f6;
 }
 
+.mobile-menu{
+display:none;
+font-size:32px;
+cursor:pointer;
+color:white;
+}
+
 /* HERO */
 
 .hero{
@@ -247,6 +254,10 @@ color:white;
 box-shadow:0 0 35px rgba(59,130,246,0.4);
 }
 
+.primary:hover{
+transform:translateY(-5px);
+}
+
 .secondary{
 border:1px solid #3b82f6;
 color:white;
@@ -282,11 +293,47 @@ line-height:1.9;
 color:#94a3b8;
 }
 
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CARDS */
+
+.card{
+background:#0f172a;
+border:1px solid #1e293b;
+border-radius:24px;
+padding:40px;
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#3b82f6;
+box-shadow:0 0 40px rgba(59,130,246,0.35);
+}
+
+.card h3{
+font-size:25px;
+margin-bottom:14px;
+}
+
+.card p{
+line-height:1.8;
+color:#94a3b8;
+}
+
 /* STATS */
 
 .stats{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 margin-top:60px;
 }
@@ -306,38 +353,6 @@ color:#3b82f6;
 
 .stat-box p{
 margin-top:10px;
-color:#94a3b8;
-}
-
-/* CARDS */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.card{
-background:#0f172a;
-border:1px solid #1e293b;
-border-radius:24px;
-padding:40px;
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#3b82f6;
-box-shadow:0 0 40px rgba(59,130,246,0.35);
-}
-
-.card h3{
-font-size:25px;
-margin-bottom:14px;
-}
-
-.card p{
-line-height:1.8;
 color:#94a3b8;
 }
 
@@ -388,59 +403,9 @@ color:#60a5fa;
 margin-bottom:20px;
 }
 
-/* DIAGRAM GRID */
-
-.diagram-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:35px;
-margin-top:60px;
-}
-
-.diagram-card{
-background:#0f172a;
-border:1px solid #1e293b;
-border-radius:24px;
-overflow:hidden;
-transition:0.4s;
-}
-
-.diagram-card:hover{
-transform:translateY(-10px);
-border-color:#3b82f6;
-box-shadow:0 0 40px rgba(59,130,246,0.25);
-}
-
-.diagram-card img{
-width:100%;
-height:240px;
-object-fit:cover;
-}
-
-.diagram-content{
-padding:28px;
-}
-
-.diagram-content h3{
-font-size:24px;
-margin-bottom:16px;
-color:#60a5fa;
-}
-
-.diagram-content p{
-line-height:1.8;
-color:#94a3b8;
-margin-bottom:24px;
-}
-
-.diagram-content button{
-padding:14px 24px;
-background:#2563eb;
-border:none;
-border-radius:14px;
-color:white;
-font-family:'Orbitron',sans-serif;
-cursor:pointer;
+.module-display p{
+line-height:1.9;
+color:#cbd5e1;
 }
 
 /* TERMINAL */
@@ -450,11 +415,13 @@ background:black;
 border:1px solid #3b82f6;
 border-radius:20px;
 padding:35px;
+box-shadow:0 0 40px rgba(59,130,246,0.2);
 }
 
 .terminal-line{
 margin:12px 0;
 color:#22c55e;
+font-size:15px;
 }
 
 /* ROADMAP */
@@ -534,6 +501,12 @@ padding:35px;
 border-radius:24px;
 border:1px solid #1e293b;
 text-align:center;
+transition:0.4s;
+}
+
+.family-card:hover{
+transform:translateY(-10px);
+border-color:#3b82f6;
 }
 
 .family-card h3{
@@ -542,46 +515,49 @@ margin-bottom:12px;
 color:#3b82f6;
 }
 
-/* FOOTER */
+/* DIAGRAMS */
 
-footer{
-padding:90px 20px;
-text-align:center;
-border-top:1px solid #1e293b;
+.diagram-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+margin-top:60px;
 }
 
-footer img{
-width:120px;
+.diagram-card{
+background:#0f172a;
+border:1px solid #1e293b;
+border-radius:24px;
+overflow:hidden;
+transition:0.4s;
 }
 
-footer h2{
-font-size:52px;
-margin-top:20px;
+.diagram-card:hover{
+transform:translateY(-10px);
+border-color:#3b82f6;
 }
 
-footer span{
-color:#3b82f6;
+.diagram-card img{
+width:100%;
+height:240px;
+object-fit:cover;
 }
 
-footer p{
-margin-top:20px;
+.diagram-content{
+padding:28px;
+}
+
+.diagram-content h3{
+font-size:24px;
+margin-bottom:16px;
+color:#60a5fa;
+}
+
+.diagram-content p{
 line-height:1.8;
 color:#94a3b8;
-}
-
-.socials{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:20px;
-}
-
-.socials a{
-padding:12px 20px;
-border:1px solid #3b82f6;
-border-radius:14px;
-text-decoration:none;
-color:white;
+font-size:14px;
+margin-bottom:24px;
 }
 
 /* MODAL */
@@ -616,9 +592,76 @@ font-size:50px;
 cursor:pointer;
 }
 
+/* FOOTER */
+
+footer{
+padding:90px 20px;
+text-align:center;
+border-top:1px solid #1e293b;
+}
+
+footer img{
+width:120px;
+}
+
+footer h2{
+font-size:52px;
+margin-top:20px;
+}
+
+footer span{
+color:#3b82f6;
+}
+
+footer p{
+margin-top:20px;
+line-height:1.8;
+color:#94a3b8;
+}
+
+.socials{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.socials a{
+padding:12px 20px;
+border:1px solid #3b82f6;
+border-radius:14px;
+text-decoration:none;
+color:white;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
+
+.mobile-menu{
+display:block;
+}
+
+.nav-links{
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#020617;
+flex-direction:column;
+align-items:center;
+padding:30px 0;
+display:none;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hero{
+padding-top:140px;
+}
 
 h1{
 font-size:54px;
@@ -628,15 +671,22 @@ font-size:54px;
 font-size:22px;
 }
 
+.desc{
+font-size:15px;
+}
+
 .section-title{
 font-size:36px;
 }
 
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
 .grid,
-.stats,
-.diagram-grid,
+.status-grid,
 .family-grid,
-.status-grid{
+.diagram-grid{
 grid-template-columns:1fr;
 }
 
@@ -691,15 +741,20 @@ CORE<span>TRION</span>
 
 </div>
 
-<div class="nav-links">
+<div class="nav-links" id="navLinks">
 
 <a href="#">Home</a>
-<a href="#technology">Technology</a>
+<a href="#features">Features</a>
 <a href="#architecture">Architecture</a>
-<a href="#processor-diagrams">Processor</a>
+<a href="#processor-diagrams">Gallery</a>
+<a href="#performance">Performance</a>
 <a href="#roadmap">Roadmap</a>
-<a href="#status">Status</a>
+<a href="#downloads">Downloads</a>
 
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+☰
 </div>
 
 </div>
@@ -713,31 +768,31 @@ CORE<span>TRION</span>
 <div class="hero-content">
 
 <div class="tag">
-🇮🇳 DESIGNED IN INDIA • BUILT FOR THE FUTURE
+🇮🇳 DESIGNED IN INDIA • AI ACCELERATED PROCESSOR
 </div>
 
 <h1>
-CORE<span>TRION</span>
+CORE<span>TRION X1</span>
 </h1>
 
 <div class="subtitle">
-Advanced Processor Core
+Advanced AI Processor Architecture
 </div>
 
 <p class="desc">
 
-Building India’s next-generation intelligent semiconductor compute platform with AI acceleration, FPGA systems, embedded intelligence and ASIC scalability.
+CORETRION X1 integrates high-performance RISC compute architecture with GPU acceleration, SIMD execution, branch prediction, kernel protection and AI acceleration.
 
 </p>
 
 <div class="buttons">
 
-<a href="#technology" class="btn primary">
-Explore Technology
+<a href="#features" class="btn primary">
+Explore Processor
 </a>
 
 <a href="#processor-diagrams" class="btn secondary">
-Processor Architecture
+Architecture Gallery
 </a>
 
 </div>
@@ -746,74 +801,46 @@ Processor Architecture
 
 </section>
 
-<!-- STATS -->
+<!-- FEATURES -->
 
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-CORETRION Statistics
-</h2>
-
-<div class="stats">
-
-<div class="stat-box">
-<h2>48+</h2>
-<p>RTL Modules</p>
-</div>
-
-<div class="stat-box">
-<h2>12</h2>
-<p>FPGA Builds</p>
-</div>
-
-<div class="stat-box">
-<h2>4</h2>
-<p>AI Accelerators</p>
-</div>
-
-<div class="stat-box">
-<h2>2027</h2>
-<p>Tapeout Goal</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TECHNOLOGY -->
-
-<section id="technology">
+<section id="features">
 
 <div class="container">
 
 <h2 class="section-title">
-Technology Stack
+CORETRION Features
 </h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>⚡ RISC Architecture</h3>
-<p>High-performance scalable processor architecture.</p>
+<h3>⚡ RISC CPU Core</h3>
+<p>Scalable high-performance processor architecture.</p>
 </div>
 
 <div class="card">
 <h3>⚡ GPU / SIMD Engine</h3>
-<p>Parallel acceleration for advanced compute workloads.</p>
+<p>Parallel vector compute acceleration subsystem.</p>
 </div>
 
 <div class="card">
-<h3>⚡ AI / ML Engine</h3>
-<p>Intelligent acceleration for AI-driven systems.</p>
+<h3>⚡ AI Tensor Engine</h3>
+<p>Neural compute acceleration for AI workloads.</p>
 </div>
 
 <div class="card">
-<h3>⚡ FPGA Validation</h3>
-<p>Real-time FPGA prototyping and validation.</p>
+<h3>⚡ Branch Prediction</h3>
+<p>Speculative execution architecture minimizing stalls.</p>
+</div>
+
+<div class="card">
+<h3>⚡ Hazard Detection</h3>
+<p>Pipeline forwarding and hazard management logic.</p>
+</div>
+
+<div class="card">
+<h3>⚡ Kernel Protection</h3>
+<p>Secure MMU and privilege-level architecture.</p>
 </div>
 
 </div>
@@ -822,7 +849,45 @@ Technology Stack
 
 </section>
 
-<!-- INTERACTIVE ARCHITECTURE -->
+<!-- PERFORMANCE -->
+
+<section id="performance">
+
+<div class="container">
+
+<h2 class="section-title">
+Performance Targets
+</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>2.5GHz</h2>
+<p>Target Frequency</p>
+</div>
+
+<div class="stat-box">
+<h2>256</h2>
+<p>SIMD Threads</p>
+</div>
+
+<div class="stat-box">
+<h2>AI</h2>
+<p>Tensor Compute</p>
+</div>
+
+<div class="stat-box">
+<h2>L1/L2</h2>
+<p>Smart Cache</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ARCHITECTURE -->
 
 <section id="architecture">
 
@@ -831,10 +896,6 @@ Technology Stack
 <h2 class="section-title">
 Interactive Architecture
 </h2>
-
-<p class="section-desc">
-Click each subsystem to explore architecture details.
-</p>
 
 <div class="architecture">
 
@@ -875,7 +936,7 @@ Select a Module
 </h3>
 
 <p id="module-description">
-Click any subsystem above to explore CORETRION internals.
+Click on any architecture block to explore subsystem details.
 </p>
 
 </div>
@@ -884,152 +945,70 @@ Click any subsystem above to explore CORETRION internals.
 
 </section>
 
-<!-- PROCESSOR DIAGRAMS -->
+<!-- GALLERY -->
 
 <section id="processor-diagrams">
 
 <div class="container">
 
 <h2 class="section-title">
-CORETRION Processor Architecture
+Processor Architecture Gallery
 </h2>
-
-<p class="section-desc">
-Complete processor subsystem architecture including datapath, GPU compute, branch prediction, hazard detection and interrupt handling.
-</p>
 
 <div class="diagram-grid">
 
-<!-- DATAPATH -->
-
 <div class="diagram-card">
-
 <img src="images/datapath.png">
-
 <div class="diagram-content">
-
 <h3>Processor Datapath</h3>
-
-<p>
-CORETRION datapath architecture integrating ALU, SIMD, MMU and writeback logic.
-</p>
-
-<button onclick="openModal('images/datapath.png')">
-View Diagram
-</button>
-
+<p>Complete datapath architecture.</p>
+<a class="btn primary" onclick="openModal('images/datapath.png')">View</a>
 </div>
-
 </div>
-
-<!-- GPU -->
 
 <div class="diagram-card">
-
 <img src="images/gpu_architecture.png">
-
 <div class="diagram-content">
-
-<h3>GPU Compute Architecture</h3>
-
-<p>
-GPU cores, schedulers, VRAM hierarchy and SIMD parallel execution.
-</p>
-
-<button onclick="openModal('images/gpu_architecture.png')">
-View Diagram
-</button>
-
+<h3>GPU Compute</h3>
+<p>GPU and SIMD execution architecture.</p>
+<a class="btn primary" onclick="openModal('images/gpu_architecture.png')">View</a>
 </div>
-
 </div>
-
-<!-- BRANCH -->
 
 <div class="diagram-card">
-
 <img src="images/branch_prediction.png">
-
 <div class="diagram-content">
-
-<h3>Branch Prediction Unit</h3>
-
-<p>
-Speculative execution and branch prediction control subsystem.
-</p>
-
-<button onclick="openModal('images/branch_prediction.png')">
-View Diagram
-</button>
-
+<h3>Branch Prediction</h3>
+<p>Dynamic speculative execution subsystem.</p>
+<a class="btn primary" onclick="openModal('images/branch_prediction.png')">View</a>
 </div>
-
 </div>
-
-<!-- HAZARD -->
 
 <div class="diagram-card">
-
 <img src="images/hazard_unit.png">
-
 <div class="diagram-content">
-
-<h3>Hazard Detection Unit</h3>
-
-<p>
-Pipeline forwarding, flush and hazard management architecture.
-</p>
-
-<button onclick="openModal('images/hazard_unit.png')">
-View Diagram
-</button>
-
+<h3>Hazard Detection</h3>
+<p>Pipeline forwarding and hazard logic.</p>
+<a class="btn primary" onclick="openModal('images/hazard_unit.png')">View</a>
 </div>
-
 </div>
-
-<!-- KERNEL -->
 
 <div class="diagram-card">
-
 <img src="images/kernel_user_mode.png">
-
 <div class="diagram-content">
-
-<h3>Kernel / User Mode</h3>
-
-<p>
-Privilege management and secure execution subsystem.
-</p>
-
-<button onclick="openModal('images/kernel_user_mode.png')">
-View Diagram
-</button>
-
+<h3>Kernel Mode</h3>
+<p>Privilege-level architecture.</p>
+<a class="btn primary" onclick="openModal('images/kernel_user_mode.png')">View</a>
 </div>
-
 </div>
-
-<!-- OVERALL -->
 
 <div class="diagram-card">
-
 <img src="images/coretrion_overall.png">
-
 <div class="diagram-content">
-
-<h3>CORETRION Overall Architecture</h3>
-
-<p>
-Complete high-level processor architecture integrating AI, GPU, DMA and memory systems.
-</p>
-
-<button onclick="openModal('images/coretrion_overall.png')">
-View Diagram
-</button>
-
+<h3>Overall Architecture</h3>
+<p>Complete processor subsystem integration.</p>
+<a class="btn primary" onclick="openModal('images/coretrion_overall.png')">View</a>
 </div>
-
 </div>
 
 </div>
@@ -1045,29 +1024,29 @@ View Diagram
 <div class="container">
 
 <h2 class="section-title">
-Semiconductor Terminal
+Processor Terminal
 </h2>
 
 <div class="terminal">
 
 <div class="terminal-line">
-[INFO] Initializing CORETRION AI Engine...
+[BOOT] CORETRION X1 INITIALIZED
 </div>
 
 <div class="terminal-line">
-[OK] RTL Simulation Active
+[OK] SIMD ENGINE ONLINE
 </div>
 
 <div class="terminal-line">
-[RUNNING] FPGA Prototype Validation
+[OK] AI ACCELERATOR ACTIVE
 </div>
 
 <div class="terminal-line">
-[RUNNING] AI Accelerator Development
+[RUNNING] BRANCH PREDICTION UNIT
 </div>
 
 <div class="terminal-line">
-[RUNNING] GPU Compute Scheduler
+[RUNNING] MEMORY SCHEDULER
 </div>
 
 </div>
@@ -1083,23 +1062,19 @@ Semiconductor Terminal
 <div class="container">
 
 <h2 class="section-title">
-Semiconductor Roadmap
+Processor Roadmap
 </h2>
 
 <div class="roadmap">
 
 <div class="roadmap-card">
 <h3>2026</h3>
-<p>
-Frontend RTL design, verification and FPGA validation.
-</p>
+<p>RTL design, verification and FPGA validation.</p>
 </div>
 
 <div class="roadmap-card">
 <h3>2027</h3>
-<p>
-ASIC physical design, GDSII generation and fabrication readiness.
-</p>
+<p>ASIC physical design and fabrication readiness.</p>
 </div>
 
 </div>
@@ -1115,7 +1090,7 @@ ASIC physical design, GDSII generation and fabrication readiness.
 <div class="container">
 
 <h2 class="section-title">
-Live Project Status
+Project Status
 </h2>
 
 <div class="status-grid">
@@ -1142,7 +1117,7 @@ Live Project Status
 
 <div class="status-card">
 
-<h3>AI ACCELERATOR — 64%</h3>
+<h3>AI ENGINE — 64%</h3>
 
 <div class="progress-bar">
 <div class="progress ai"></div>
@@ -1166,36 +1141,40 @@ Live Project Status
 
 </section>
 
-<!-- FAMILY -->
+<!-- DOWNLOADS -->
 
-<section>
+<section id="downloads">
 
 <div class="container">
 
 <h2 class="section-title">
-CORETRION Family
+Downloads
 </h2>
 
 <div class="family-grid">
 
 <div class="family-card">
-<h3>EDGE</h3>
-<p>Low-power edge compute systems.</p>
+<h3>Architecture PDF</h3>
+<p>Processor subsystem documentation.</p>
+<a href="#" class="btn primary">Download</a>
 </div>
 
 <div class="family-card">
-<h3>AI</h3>
-<p>Dedicated AI acceleration platform.</p>
+<h3>Datasheet</h3>
+<p>Processor specifications and interfaces.</p>
+<a href="#" class="btn primary">Download</a>
 </div>
 
 <div class="family-card">
-<h3>RT</h3>
-<p>Real-time deterministic systems.</p>
+<h3>RTL Preview</h3>
+<p>RTL subsystem overview.</p>
+<a href="#" class="btn primary">Download</a>
 </div>
 
 <div class="family-card">
-<h3>HPC</h3>
-<p>High-performance compute architecture.</p>
+<h3>Whitepaper</h3>
+<p>Technical architecture overview.</p>
+<a href="#" class="btn primary">Download</a>
 </div>
 
 </div>
@@ -1211,27 +1190,31 @@ CORETRION Family
 <img src="images/coretrion-logo.png">
 
 <h2>
-CORE<span>TRION</span>
+CORE<span>TRION X1</span>
 </h2>
 
 <p>
-Advanced Processor Core
+Advanced AI Accelerated Processor Architecture
 </p>
 
 <p>
-CORETRION™ is an indigenous semiconductor and intelligent compute initiative focused on scalable processor architectures and AI acceleration.
+CORETRION X1 integrates GPU acceleration, SIMD execution, intelligent memory systems and AI compute acceleration.
 </p>
 
 <div class="socials">
 
-<a href="#">GitHub</a>
-<a href="#">LinkedIn</a>
-<a href="#">Email</a>
+<a href="https://github.com/" target="_blank">
+GitHub
+</a>
+
+<a href="https://linkedin.com/" target="_blank">
+LinkedIn
+</a>
 
 </div>
 
 <p style="margin-top:40px;">
-© 2026 CORETRION™ • Designed in India • Built for the Future
+© 2026 CORETRION X1
 </p>
 
 </footer>
@@ -1251,6 +1234,23 @@ CORETRION™ is an indigenous semiconductor and intelligent compute initiative f
 <!-- JAVASCRIPT -->
 
 <script>
+
+/* MOBILE MENU */
+
+const mobileMenu = document.getElementById("mobileMenu");
+const navLinks = document.getElementById("navLinks");
+
+mobileMenu.onclick = function(){
+
+navLinks.classList.toggle("active");
+
+if(navLinks.classList.contains("active")){
+mobileMenu.innerHTML = "✕";
+}else{
+mobileMenu.innerHTML = "☰";
+}
+
+};
 
 /* LOADER */
 
@@ -1295,43 +1295,43 @@ if(module === "cpu"){
 title.innerHTML = "RISC CPU Core";
 
 description.innerHTML =
-"CORETRION scalable RISC processor architecture with pipeline execution and intelligent compute acceleration.";
+"CORETRION integrates scalable high-performance RISC architecture.";
 
 }
 
 else if(module === "cache"){
 
-title.innerHTML = "Cache & Memory Subsystem";
+title.innerHTML = "Smart Cache";
 
 description.innerHTML =
-"Optimized L1/L2 cache hierarchy designed for low latency and high bandwidth.";
+"L1/L2 optimized memory subsystem.";
 
 }
 
 else if(module === "mmu"){
 
-title.innerHTML = "MMU / MPU";
+title.innerHTML = "MMU / Kernel Protection";
 
 description.innerHTML =
-"Advanced memory management and protection subsystem with RTOS compatibility.";
+"Secure memory protection and isolation architecture.";
 
 }
 
 else if(module === "ai"){
 
-title.innerHTML = "AI / ML Accelerator";
+title.innerHTML = "AI Tensor Engine";
 
 description.innerHTML =
-"Dedicated tensor acceleration architecture for neural compute workloads.";
+"Integrated neural compute acceleration subsystem.";
 
 }
 
 else if(module === "gpu"){
 
-title.innerHTML = "GPU / SIMD Engine";
+title.innerHTML = "GPU / SIMD Compute";
 
 description.innerHTML =
-"Parallel SIMD and GPU acceleration subsystem for high-performance compute.";
+"Parallel vector execution architecture.";
 
 }
 
@@ -1368,5 +1368,4 @@ modal.style.display = "none";
 </script>
 
 </body>
-
 </html>
