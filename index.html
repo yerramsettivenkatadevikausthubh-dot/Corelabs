@@ -3,38 +3,19 @@
 
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CORETRION™ | Hybrid Compute Architecture</title>
+<title>CORETRION™ | CHIPSETRON™ Processor Platform</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description"
+content="CORETRION™ Advanced Processor & CHIPSETRON™ Intelligent Microcontroller Platform">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="images/coretrion-logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-
-/* ========================= */
-/* ROOT */
-/* ========================= */
-
-:root{
-
---bg:#020617;
---card:#0f172a;
---card2:#111827;
---primary:#3b82f6;
---secondary:#60a5fa;
---text:#ffffff;
---muted:#94a3b8;
---border:#1e293b;
-
-}
-
-/* ========================= */
-/* GLOBAL */
-/* ========================= */
 
 *{
 margin:0;
@@ -44,46 +25,25 @@ scroll-behavior:smooth;
 }
 
 body{
-
-background:var(--bg);
-color:var(--text);
-font-family:'Inter',sans-serif;
-overflow-x:hidden;
-
-}
-
-img{
-max-width:100%;
-display:block;
-}
-
-h1,h2,h3,h4{
 font-family:'Orbitron',sans-serif;
-}
-
-.container{
-max-width:1400px;
-margin:auto;
-padding:0 20px;
+background:#020617;
+color:white;
+overflow-x:hidden;
 }
 
 /* ========================= */
-/* GRID BG */
+/* BACKGROUND */
 /* ========================= */
 
 .grid-bg{
-
 position:fixed;
-inset:0;
-
+width:100%;
+height:100%;
 background-image:
 linear-gradient(rgba(59,130,246,0.05) 1px, transparent 1px),
 linear-gradient(90deg, rgba(59,130,246,0.05) 1px, transparent 1px);
-
 background-size:40px 40px;
-
 z-index:-2;
-
 }
 
 /* ========================= */
@@ -91,47 +51,39 @@ z-index:-2;
 /* ========================= */
 
 #loader{
-
 position:fixed;
-inset:0;
+width:100%;
+height:100%;
 background:#020617;
-
+z-index:999999;
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-
-z-index:999999;
-
 }
 
-.loader-box{
-
+.loader-chip{
 width:110px;
 height:110px;
-
-border:5px solid var(--primary);
-
+border:5px solid #3b82f6;
+box-shadow:0 0 40px #3b82f6;
 animation:spin 2s linear infinite;
-
-box-shadow:0 0 50px rgba(59,130,246,0.5);
-
 }
 
-.loader-text{
-
-margin-top:25px;
+.loader-percent{
+margin-top:20px;
 font-size:30px;
-font-family:'Orbitron',sans-serif;
-color:var(--secondary);
-
+color:#60a5fa;
+font-weight:700;
 }
 
 @keyframes spin{
-
-from{transform:rotate(0deg);}
-to{transform:rotate(360deg);}
-
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
 }
 
 /* ========================= */
@@ -139,145 +91,97 @@ to{transform:rotate(360deg);}
 /* ========================= */
 
 nav{
-
 position:fixed;
 top:0;
 left:0;
-
 width:100%;
-
-z-index:1000;
-
-background:rgba(2,6,23,0.92);
-
-backdrop-filter:blur(18px);
-
+background:rgba(2,6,23,0.9);
+backdrop-filter:blur(15px);
 border-bottom:1px solid rgba(59,130,246,0.15);
-
+z-index:10000;
 }
 
 .nav-container{
-
 max-width:1400px;
 margin:auto;
-
-padding:18px 22px;
-
+padding:16px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 }
 
 .logo{
-
 display:flex;
 align-items:center;
-gap:14px;
-
+gap:12px;
 }
 
 .logo img{
-
-width:52px;
-height:52px;
-object-fit:contain;
-
+width:48px;
+height:48px;
 }
 
 .logo h2{
-
 font-size:28px;
 font-weight:900;
-
 }
 
 .logo span{
-color:var(--primary);
+color:#3b82f6;
 }
 
 .nav-links{
-
 display:flex;
-gap:30px;
-
+gap:28px;
 }
 
 .nav-links a{
-
 text-decoration:none;
 color:white;
 font-size:14px;
-font-family:'Orbitron',sans-serif;
-
 transition:0.3s;
-
 }
 
 .nav-links a:hover{
-color:var(--secondary);
-}
-
-/* ========================= */
-/* MOBILE MENU */
-/* ========================= */
-
-.menu-btn{
-
-display:none;
-font-size:34px;
-cursor:pointer;
-
+color:#3b82f6;
 }
 
 .mobile-menu{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
 
+/* MOBILE NAV */
+
+.mobile-nav{
 position:fixed;
 top:0;
 right:-100%;
-
-width:80%;
+width:75%;
 height:100vh;
-
-background:#081120;
-
-padding:120px 30px;
-
-transition:0.4s ease;
-
-z-index:2000;
-
+background:#020617;
+z-index:100001;
+padding:100px 30px;
+transition:0.4s;
+display:flex;
+flex-direction:column;
+gap:30px;
 border-left:1px solid rgba(59,130,246,0.2);
-
 }
 
-.mobile-menu.active{
+.mobile-nav.active{
 right:0;
 }
 
-.mobile-menu a{
-
-display:block;
-margin-bottom:28px;
-
-font-size:18px;
-
-font-family:'Orbitron',sans-serif;
-
+.mobile-nav a{
 text-decoration:none;
 color:white;
-
+font-size:18px;
 }
 
-.close-btn{
-
-position:absolute;
-top:24px;
-right:30px;
-
-font-size:42px;
-cursor:pointer;
-
+.mobile-nav a:hover{
+color:#3b82f6;
 }
 
 /* ========================= */
@@ -285,177 +189,120 @@ cursor:pointer;
 /* ========================= */
 
 .hero{
-
 min-height:100vh;
 
-display:flex;
-justify-content:center;
-align-items:center;
-
-text-align:center;
-
-padding:140px 20px 100px;
-
-position:relative;
-
-overflow:hidden;
-
 background:
-linear-gradient(rgba(2,6,23,0.88),rgba(2,6,23,0.95)),
+linear-gradient(rgba(2,6,23,0.85),rgba(2,6,23,0.95)),
 url('images/coretrion-banner.png');
 
 background-size:cover;
 background-position:center;
 
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+padding:140px 20px 100px;
+
+position:relative;
+overflow:hidden;
 }
 
 .hero::before{
-
 content:"";
-
 position:absolute;
-
-width:1600px;
-height:1600px;
-
-border-radius:50%;
-
+width:200%;
+height:200%;
 background:
 radial-gradient(circle,
-rgba(59,130,246,0.18),
-transparent 65%);
-
+rgba(59,130,246,0.12),
+transparent 60%);
 animation:rotateGlow 14s linear infinite;
-
 }
 
 @keyframes rotateGlow{
-
-from{transform:rotate(0deg);}
-to{transform:rotate(360deg);}
-
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
 }
 
 .hero-content{
-
 position:relative;
-z-index:2;
-
-max-width:1200px;
-
+z-index:10;
+max-width:1100px;
 }
 
 .tag{
-
 display:inline-block;
-
 padding:12px 24px;
-
-border:1px solid rgba(96,165,250,0.4);
-
-border-radius:100px;
-
+border:1px solid #3b82f6;
+border-radius:40px;
+color:#60a5fa;
 font-size:13px;
-
-font-family:'Orbitron',sans-serif;
-
-letter-spacing:2px;
-
-color:#93c5fd;
-
 margin-bottom:28px;
-
 }
 
 .hero h1{
-
 font-size:110px;
-font-weight:900;
 line-height:1;
-
+font-weight:900;
 }
 
 .hero h1 span{
-color:var(--primary);
+color:#3b82f6;
 }
 
-.hero-sub{
-
+.subtitle{
 font-size:34px;
-
-margin-top:24px;
-
-font-family:'Orbitron',sans-serif;
-
+margin-top:25px;
 color:#dbeafe;
-
 }
 
-.hero p{
-
+.desc{
 max-width:950px;
-
 margin:35px auto;
-
 line-height:1.9;
-
 font-size:20px;
-
 color:#cbd5e1;
-
 }
 
-.button-group{
-
+.buttons{
+margin-top:45px;
 display:flex;
 justify-content:center;
-gap:18px;
+gap:20px;
 flex-wrap:wrap;
-
-margin-top:20px;
-
 }
 
 .btn{
-
 padding:18px 34px;
-
-border-radius:18px;
-
+border-radius:16px;
 text-decoration:none;
-
 font-weight:700;
-
-font-family:'Orbitron',sans-serif;
-
 transition:0.3s;
-
 }
 
-.primary-btn{
-
-background:var(--primary);
-
+.primary{
+background:#2563eb;
 color:white;
-
-box-shadow:0 0 40px rgba(59,130,246,0.4);
-
+box-shadow:0 0 30px rgba(59,130,246,0.3);
 }
 
-.primary-btn:hover{
+.primary:hover{
 transform:translateY(-5px);
 }
 
-.secondary-btn{
-
-border:1px solid rgba(96,165,250,0.5);
-
+.secondary{
+border:1px solid #3b82f6;
 color:white;
-
 }
 
-.secondary-btn:hover{
-background:var(--primary);
+.secondary:hover{
+background:#3b82f6;
 }
 
 /* ========================= */
@@ -463,39 +310,31 @@ background:var(--primary);
 /* ========================= */
 
 section{
-padding:110px 0;
+padding:110px 20px;
+}
+
+.container{
+max-width:1350px;
+margin:auto;
 }
 
 .section-title{
-
-font-size:56px;
-
 text-align:center;
-
-margin-bottom:18px;
-
+font-size:56px;
+margin-bottom:20px;
 font-weight:900;
-
 }
 
 .section-title span{
-color:var(--primary);
+color:#3b82f6;
 }
 
 .section-desc{
-
-max-width:950px;
-
-margin:0 auto 70px;
-
 text-align:center;
-
+max-width:900px;
+margin:0 auto 70px;
 line-height:1.9;
-
-font-size:17px;
-
-color:var(--muted);
-
+color:#94a3b8;
 }
 
 /* ========================= */
@@ -503,242 +342,123 @@ color:var(--muted);
 /* ========================= */
 
 .stats-grid{
-
 display:grid;
-grid-template-columns:repeat(4,1fr);
-
-gap:24px;
-
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:50px;
 }
 
 .stat-card{
-
-background:var(--card);
-
-padding:36px 20px;
-
-border-radius:26px;
-
-border:1px solid var(--border);
-
+background:#0f172a;
+padding:40px;
+border-radius:24px;
 text-align:center;
-
-transition:0.4s;
-
+border:1px solid #1e293b;
+transition:0.3s;
 }
 
 .stat-card:hover{
-
 transform:translateY(-10px);
-
-box-shadow:0 0 40px rgba(59,130,246,0.25);
-
+border-color:#3b82f6;
+box-shadow:0 0 35px rgba(59,130,246,0.2);
 }
 
 .stat-card h2{
-
-font-size:48px;
-
-color:var(--secondary);
-
-margin-bottom:12px;
-
-}
-
-.stat-card p{
-color:var(--muted);
+font-size:58px;
+color:#3b82f6;
+margin-bottom:15px;
 }
 
 /* ========================= */
-/* GRID */
+/* TECHNOLOGY */
 /* ========================= */
 
-.grid-4{
-
+.grid{
 display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:26px;
-
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-
-background:linear-gradient(180deg,var(--card),var(--card2));
-
-padding:35px;
-
-border-radius:26px;
-
-border:1px solid var(--border);
-
+background:#0f172a;
+padding:40px;
+border-radius:24px;
+border:1px solid #1e293b;
 transition:0.4s;
-
 }
 
 .card:hover{
-
 transform:translateY(-10px);
-
-border-color:rgba(59,130,246,0.5);
-
-box-shadow:0 0 40px rgba(59,130,246,0.22);
-
+border-color:#3b82f6;
+box-shadow:0 0 35px rgba(59,130,246,0.2);
 }
 
 .card h3{
-
 font-size:24px;
-
 margin-bottom:16px;
-
+color:#60a5fa;
 }
 
 .card p{
-
-line-height:1.9;
-
-color:var(--muted);
-
-}
-
-/* ========================= */
-/* SPEC TABLE */
-/* ========================= */
-
-.spec-table{
-
-overflow-x:auto;
-
-border-radius:24px;
-
-border:1px solid var(--border);
-
-}
-
-.spec-table table{
-
-width:100%;
-min-width:700px;
-
-border-collapse:collapse;
-
-background:var(--card);
-
-}
-
-.spec-table th,
-.spec-table td{
-
-padding:22px;
-
-text-align:left;
-
-border-bottom:1px solid var(--border);
-
-}
-
-.spec-table th{
-
-background:#111827;
-
-font-family:'Orbitron',sans-serif;
-
-color:#93c5fd;
-
-}
-
-.spec-table td{
-color:#cbd5e1;
-}
-
-/* ========================= */
-/* ARCHITECTURE */
-/* ========================= */
-
-.arch-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:28px;
-
-}
-
-.arch-card{
-
-background:var(--card);
-
-border-radius:26px;
-
-overflow:hidden;
-
-border:1px solid var(--border);
-
-transition:0.4s;
-
-}
-
-.arch-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 0 40px rgba(59,130,246,0.25);
-
-}
-
-.arch-card img{
-
-height:240px;
-
-width:100%;
-
-object-fit:cover;
-
-}
-
-.arch-content{
-
-padding:28px;
-
-}
-
-.arch-content h3{
-
-font-size:24px;
-
-margin-bottom:16px;
-
-}
-
-.arch-content p{
-
 line-height:1.8;
-
-color:var(--muted);
-
-margin-bottom:24px;
-
+color:#94a3b8;
 }
 
-.arch-content button{
+/* ========================= */
+/* DIAGRAMS */
+/* ========================= */
 
+.diagram-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.diagram-card{
+background:#0f172a;
+border-radius:24px;
+overflow:hidden;
+border:1px solid #1e293b;
+transition:0.4s;
+}
+
+.diagram-card:hover{
+transform:translateY(-10px);
+border-color:#3b82f6;
+box-shadow:0 0 40px rgba(59,130,246,0.25);
+}
+
+.diagram-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.diagram-content{
+padding:28px;
+}
+
+.diagram-content h3{
+font-size:24px;
+margin-bottom:16px;
+color:#60a5fa;
+}
+
+.diagram-content p{
+line-height:1.8;
+color:#94a3b8;
+font-size:14px;
+margin-bottom:22px;
+}
+
+.diagram-content button{
 padding:14px 24px;
-
-background:var(--primary);
-
+background:#2563eb;
 border:none;
-
 border-radius:14px;
-
 color:white;
-
-font-family:'Orbitron',sans-serif;
-
 cursor:pointer;
-
+font-family:'Orbitron',sans-serif;
 }
 
 /* ========================= */
@@ -746,146 +466,16 @@ cursor:pointer;
 /* ========================= */
 
 .terminal{
-
 background:black;
-
 padding:35px;
-
-border-radius:24px;
-
-border:1px solid rgba(59,130,246,0.4);
-
-box-shadow:0 0 40px rgba(59,130,246,0.2);
-
+border-radius:20px;
+border:1px solid #3b82f6;
 }
 
 .terminal-line{
-
 margin:14px 0;
-
 color:#22c55e;
-
-font-family:monospace;
-
 font-size:15px;
-
-}
-
-/* ========================= */
-/* ROADMAP */
-/* ========================= */
-
-.roadmap{
-
-display:flex;
-flex-direction:column;
-gap:24px;
-
-}
-
-.roadmap-card{
-
-background:var(--card);
-
-padding:36px;
-
-border-radius:22px;
-
-border-left:5px solid var(--primary);
-
-}
-
-.roadmap-card h3{
-
-font-size:28px;
-
-margin-bottom:12px;
-
-}
-
-.roadmap-card p{
-
-line-height:1.8;
-
-color:var(--muted);
-
-}
-
-/* ========================= */
-/* FOOTER */
-/* ========================= */
-
-footer{
-
-padding:90px 20px;
-
-text-align:center;
-
-border-top:1px solid var(--border);
-
-}
-
-footer img{
-
-width:110px;
-
-margin:auto;
-
-}
-
-footer h2{
-
-font-size:52px;
-
-margin-top:24px;
-
-}
-
-footer h2 span{
-color:var(--primary);
-}
-
-footer p{
-
-max-width:900px;
-
-margin:20px auto;
-
-line-height:1.9;
-
-color:var(--muted);
-
-}
-
-.footer-links{
-
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-
-margin-top:30px;
-
-}
-
-.footer-links a{
-
-padding:14px 22px;
-
-border-radius:14px;
-
-border:1px solid rgba(59,130,246,0.3);
-
-text-decoration:none;
-
-color:white;
-
-transition:0.3s;
-
-}
-
-.footer-links a:hover{
-background:var(--primary);
 }
 
 /* ========================= */
@@ -893,183 +483,166 @@ background:var(--primary);
 /* ========================= */
 
 .modal{
-
 display:none;
-
 position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,0.95);
-
 z-index:999999;
-
-padding:30px;
-
+padding-top:40px;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
 }
 
-.modal img{
-
-max-width:95%;
-
-max-height:90vh;
-
-margin:auto;
-
+.modal-content{
 display:block;
-
+margin:auto;
+max-width:92%;
+max-height:90vh;
 border-radius:20px;
-
-margin-top:40px;
-
 }
 
 .close-modal{
-
 position:absolute;
-
-top:18px;
-right:30px;
-
+top:20px;
+right:35px;
 font-size:50px;
-
 cursor:pointer;
-
 }
 
 /* ========================= */
-/* RESPONSIVE */
+/* FOOTER */
 /* ========================= */
 
-@media(max-width:1200px){
-
-.stats-grid,
-.grid-4,
-.arch-grid{
-
-grid-template-columns:repeat(2,1fr);
-
+footer{
+padding:80px 20px;
+text-align:center;
+border-top:1px solid #1e293b;
 }
+
+footer h2{
+font-size:50px;
+margin-top:20px;
+}
+
+footer span{
+color:#3b82f6;
+}
+
+footer p{
+margin-top:20px;
+line-height:1.8;
+color:#94a3b8;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:992px){
 
 .hero h1{
-font-size:82px;
+font-size:72px;
+}
+
+.subtitle{
+font-size:28px;
 }
 
 }
 
 @media(max-width:768px){
 
+body{
+overflow-x:hidden;
+}
+
 .nav-links{
 display:none;
 }
 
-.menu-btn{
+.mobile-menu{
 display:block;
 }
 
-.hero{
-
-padding:130px 20px 90px;
-
-}
-
-.hero h1{
-
-font-size:54px;
-line-height:1.1;
-
-}
-
-.hero-sub{
+.logo h2{
 font-size:22px;
 }
 
-.hero p{
-
-font-size:15px;
-line-height:1.9;
-
+.logo img{
+width:40px;
+height:40px;
 }
 
-.button-group{
+.hero{
+padding:130px 18px 90px;
+min-height:auto;
+}
 
+.hero h1{
+font-size:52px;
+line-height:1.1;
+}
+
+.subtitle{
+font-size:22px;
+}
+
+.desc{
+font-size:15px;
+line-height:1.8;
+}
+
+.buttons{
 flex-direction:column;
 align-items:center;
-
 }
 
 .btn{
-
 width:100%;
-max-width:320px;
-
+max-width:300px;
 text-align:center;
-
 }
 
 .section-title{
 font-size:34px;
 }
 
-.section-desc{
-
-font-size:14px;
-
-margin-bottom:50px;
-
-}
-
-.stats-grid,
-.grid-4,
-.arch-grid{
-
+.stats-grid{
 grid-template-columns:1fr;
-
 }
 
-.card,
-.arch-card,
-.stat-card{
-
-padding:26px;
-
+.grid{
+grid-template-columns:1fr;
 }
 
-.arch-card img{
+.diagram-grid{
+grid-template-columns:1fr;
+}
 
+.diagram-card img{
 height:200px;
-
 }
 
-.logo h2{
-font-size:20px;
+.card{
+padding:30px;
 }
 
-.logo img{
-
-width:42px;
-height:42px;
-
+.stat-card{
+padding:30px;
 }
 
-.modal{
-padding:10px;
+.section-desc{
+font-size:14px;
 }
 
-.modal img{
-
-max-width:100%;
-
-margin-top:80px;
-
+.modal-content{
+max-width:96%;
 }
 
 .close-modal{
-
-font-size:38px;
-
-right:16px;
-
+font-size:40px;
+right:20px;
 }
 
 }
@@ -1082,19 +655,36 @@ right:16px;
 
 <div class="grid-bg"></div>
 
+<!-- ========================= -->
 <!-- LOADER -->
+<!-- ========================= -->
 
 <div id="loader">
 
-<div class="loader-box"></div>
+<div class="loader-chip"></div>
 
-<div class="loader-text" id="loaderText">
+<div class="loader-percent" id="percent">
 0%
 </div>
 
 </div>
 
+<!-- ========================= -->
+<!-- MOBILE NAV -->
+<!-- ========================= -->
+
+<div class="mobile-nav" id="mobileNav">
+
+<a href="#">Home</a>
+<a href="#technology">Technology</a>
+<a href="#processor-diagrams">Architecture</a>
+<a href="#stats">Statistics</a>
+
+</div>
+
+<!-- ========================= -->
 <!-- NAVBAR -->
+<!-- ========================= -->
 
 <nav>
 
@@ -1112,16 +702,14 @@ CORE<span>TRION</span>
 
 <div class="nav-links">
 
-<a href="#home">Home</a>
-<a href="#overview">Overview</a>
-<a href="#chipsetron">Chipsetron</a>
-<a href="#specs">Specifications</a>
-<a href="#architecture">Architecture</a>
-<a href="#roadmap">Roadmap</a>
+<a href="#">Home</a>
+<a href="#technology">Technology</a>
+<a href="#processor-diagrams">Architecture</a>
+<a href="#stats">Statistics</a>
 
 </div>
 
-<div class="menu-btn" onclick="openMenu()">
+<div class="mobile-menu" onclick="toggleMenu()">
 ☰
 </div>
 
@@ -1129,55 +717,40 @@ CORE<span>TRION</span>
 
 </nav>
 
-<!-- MOBILE MENU -->
-
-<div class="mobile-menu" id="mobileMenu">
-
-<div class="close-btn" onclick="closeMenu()">
-×
-</div>
-
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#overview" onclick="closeMenu()">Overview</a>
-<a href="#chipsetron" onclick="closeMenu()">Chipsetron</a>
-<a href="#specs" onclick="closeMenu()">Specifications</a>
-<a href="#architecture" onclick="closeMenu()">Architecture</a>
-<a href="#roadmap" onclick="closeMenu()">Roadmap</a>
-
-</div>
-
+<!-- ========================= -->
 <!-- HERO -->
+<!-- ========================= -->
 
-<section class="hero" id="home">
+<section class="hero">
 
 <div class="hero-content">
 
 <div class="tag">
-🇮🇳 HYBRID INTELLIGENT COMPUTE ARCHITECTURE
+🇮🇳 DESIGNED IN INDIA • CUSTOM PIPELINE ARCHITECTURE
 </div>
 
 <h1>
 CORE<span>TRION</span>
 </h1>
 
-<div class="hero-sub">
-Advanced Hybrid Compute Pipeline
+<div class="subtitle">
+Advanced Processor + CHIPSETRON™ Intelligent Microcontroller
 </div>
 
-<p>
+<p class="desc">
 
-CORETRION™ is a next-generation proprietary compute architecture integrating intelligent execution routing, SIMD acceleration, GPU compute, tensor processing, AI acceleration and advanced memory systems through a custom multi-engine execution pipeline.
+CORETRION™ is a custom intelligent compute architecture integrating GPU acceleration, SIMD execution, AI/ML engines, kernel-mode hardware, memory protection and custom multi-stage execution routing architecture powering the CHIPSETRON™ microcontroller platform.
 
 </p>
 
-<div class="button-group">
+<div class="buttons">
 
-<a href="#architecture" class="btn primary-btn">
+<a href="#technology" class="btn primary">
 Explore Architecture
 </a>
 
-<a href="#specs" class="btn secondary-btn">
-View Specifications
+<a href="#processor-diagrams" class="btn secondary">
+View Diagrams
 </a>
 
 </div>
@@ -1186,9 +759,11 @@ View Specifications
 
 </section>
 
+<!-- ========================= -->
 <!-- STATS -->
+<!-- ========================= -->
 
-<section>
+<section id="stats">
 
 <div class="container">
 
@@ -1199,23 +774,43 @@ CORETRION <span>Statistics</span>
 <div class="stats-grid">
 
 <div class="stat-card">
-<h2>48+</h2>
+
+<h2 class="counter" data-target="48">
+0
+</h2>
+
 <p>RTL Modules</p>
+
 </div>
 
 <div class="stat-card">
-<h2>5</h2>
+
+<h2 class="counter" data-target="5">
+0
+</h2>
+
 <p>Pipeline Stages</p>
+
 </div>
 
 <div class="stat-card">
-<h2>12</h2>
+
+<h2 class="counter" data-target="12">
+0
+</h2>
+
 <p>Integrated Peripherals</p>
+
 </div>
 
 <div class="stat-card">
-<h2>2027</h2>
+
+<h2 class="counter" data-target="2027">
+0
+</h2>
+
 <p>ASIC Goal</p>
+
 </div>
 
 </div>
@@ -1224,70 +819,46 @@ CORETRION <span>Statistics</span>
 
 </section>
 
-<!-- OVERVIEW -->
+<!-- ========================= -->
+<!-- TECHNOLOGY -->
+<!-- ========================= -->
 
-<section id="overview">
+<section id="technology">
 
 <div class="container">
 
 <h2 class="section-title">
-Architecture <span>Overview</span>
+Technology <span>Stack</span>
 </h2>
 
-<p class="section-desc">
-
-Unlike traditional CPU architectures, CORETRION implements a proprietary execution-routing pipeline capable of dynamically distributing workloads across ALU, SIMD, Tensor, GPU and AI execution engines.
-
-</p>
-
-<div class="grid-4">
+<div class="grid">
 
 <div class="card">
-
 <h3>⚡ Custom Pipeline</h3>
-
 <p>
-
-Proprietary Fetch → Decode → Execute/Route → Memory → Writeback architecture enabling intelligent compute execution.
-
+CORETRION uses a custom execution-routing pipeline integrating ALU, SIMD, GPU, Tensor and ML execution stages.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>⚡ Multi-Engine Execution</h3>
-
+<h3>⚡ GPU / SIMD Engine</h3>
 <p>
-
-Integrated ALU, SIMD, Tensor, ML and GPU execution subsystems connected through dynamic execution routing.
-
+Parallel execution architecture for vector compute acceleration and AI workloads.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>⚡ AI + GPU Compute</h3>
-
+<h3>⚡ AI / Tensor Engine</h3>
 <p>
-
-Dedicated AI acceleration and GPU compute architecture optimized for intelligent parallel workloads.
-
+Integrated AI acceleration subsystem supporting intelligent embedded compute.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>⚡ Kernel + MMU</h3>
-
+<h3>⚡ CHIPSETRON MCU</h3>
 <p>
-
-Kernel/User mode isolation, MMU support, interrupt handling and secure execution architecture.
-
+Advanced intelligent microcontroller platform integrating peripherals, DMA, RTOS and AI compute.
 </p>
-
 </div>
 
 </div>
@@ -1296,310 +867,34 @@ Kernel/User mode isolation, MMU support, interrupt handling and secure execution
 
 </section>
 
-<!-- CHIPSETRON -->
+<!-- ========================= -->
+<!-- PROCESSOR DIAGRAMS -->
+<!-- ========================= -->
 
-<section id="chipsetron">
+<section id="processor-diagrams">
 
 <div class="container">
 
 <h2 class="section-title">
-CHIPSETRON <span>Microcontroller Platform</span>
+Processor <span>Architecture</span>
 </h2>
 
 <p class="section-desc">
-
-CHIPSETRON™ is an embedded intelligent microcontroller ecosystem integrating communication peripherals, analog interfaces, timers and real-time embedded execution systems.
-
+Complete CORETRION architecture diagrams and execution subsystems.
 </p>
 
-<div class="grid-4">
+<div class="diagram-grid">
 
-<div class="card">
-
-<h3>UART / SPI / I2C</h3>
-
-<p>
-
-High-speed communication interfaces for industrial embedded connectivity and control systems.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>GPIO / PWM</h3>
-
-<p>
-
-Flexible digital control architecture supporting waveform generation and embedded automation.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>ADC / DAC</h3>
-
-<p>
-
-Mixed-signal analog interfacing architecture integrating sensor and actuator connectivity.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>RTOS + Interrupts</h3>
-
-<p>
-
-Integrated scheduling, interrupt handling, timers and deterministic embedded execution support.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SPECIFICATIONS -->
-
-<section id="specs">
-
-<div class="container">
-
-<h2 class="section-title">
-Technical <span>Specifications</span>
-</h2>
-
-<div class="spec-table">
-
-<table>
-
-<tr>
-
-<th>Feature</th>
-<th>CORETRION</th>
-
-</tr>
-
-<tr>
-
-<td>Architecture</td>
-<td>Custom Hybrid Compute Architecture</td>
-
-</tr>
-
-<tr>
-
-<td>Pipeline</td>
-<td>Fetch → Decode → Execute/Route → Memory → Writeback</td>
-
-</tr>
-
-<tr>
-
-<td>Execution Engines</td>
-<td>ALU / SIMD / Tensor / ML / GPU</td>
-
-</tr>
-
-<tr>
-
-<td>Memory System</td>
-<td>L1/L2 Cache + MMU</td>
-
-</tr>
-
-<tr>
-
-<td>Interrupt System</td>
-<td>Integrated Interrupt Controller</td>
-
-</tr>
-
-<tr>
-
-<td>Security</td>
-<td>Kernel/User Isolation</td>
-
-</tr>
-
-<tr>
-
-<td>Validation</td>
-<td>RTL + FPGA</td>
-
-</tr>
-
-<tr>
-
-<td>Microcontroller</td>
-<td>CHIPSETRON Platform</td>
-
-</tr>
-
-<tr>
-
-<td>Target</td>
-<td>FPGA + ASIC</td>
-
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ARCHITECTURE -->
-
-<section id="architecture">
-
-<div class="container">
-
-<h2 class="section-title">
-Processor <span>Architecture Gallery</span>
-</h2>
-
-<p class="section-desc">
-
-CORETRION subsystem architecture including pipeline execution, GPU compute, memory systems, hazard detection and intelligent execution control.
-
-</p>
-
-<div class="arch-grid">
-
-<div class="arch-card">
-
-<img src="images/datapath.png">
-
-<div class="arch-content">
-
-<h3>Processor Datapath</h3>
-
-<p>
-
-Integrated datapath architecture connecting ALU, SIMD, MMU and execution logic.
-
-</p>
-
-<button onclick="openModal('images/datapath.png')">
-View Diagram
-</button>
-
-</div>
-
-</div>
-
-<div class="arch-card">
-
-<img src="images/branch_prediction.png">
-
-<div class="arch-content">
-
-<h3>Branch Prediction</h3>
-
-<p>
-
-Speculative execution and branch prediction reducing pipeline stalls.
-
-</p>
-
-<button onclick="openModal('images/branch_prediction.png')">
-View Diagram
-</button>
-
-</div>
-
-</div>
-
-<div class="arch-card">
-
-<img src="images/gpu_architecture.png">
-
-<div class="arch-content">
-
-<h3>GPU Compute</h3>
-
-<p>
-
-Parallel compute subsystem with schedulers, memory hierarchy and SIMD execution.
-
-</p>
-
-<button onclick="openModal('images/gpu_architecture.png')">
-View Diagram
-</button>
-
-</div>
-
-</div>
-
-<div class="arch-card">
-
-<img src="images/hazard_unit.png">
-
-<div class="arch-content">
-
-<h3>Hazard Unit</h3>
-
-<p>
-
-Pipeline hazard detection, forwarding logic and stall management.
-
-</p>
-
-<button onclick="openModal('images/hazard_unit.png')">
-View Diagram
-</button>
-
-</div>
-
-</div>
-
-<div class="arch-card">
-
-<img src="images/kernel_user_mode.png">
-
-<div class="arch-content">
-
-<h3>Kernel/User Mode</h3>
-
-<p>
-
-Privilege-level execution architecture and memory isolation.
-
-</p>
-
-<button onclick="openModal('images/kernel_user_mode.png')">
-View Diagram
-</button>
-
-</div>
-
-</div>
-
-<div class="arch-card">
+<div class="diagram-card">
 
 <img src="images/coretrion_overall.png">
 
-<div class="arch-content">
+<div class="diagram-content">
 
-<h3>Overall Architecture</h3>
+<h3>Overall Processor Architecture</h3>
 
 <p>
-
-Complete processor subsystem integration architecture.
-
+Complete processor subsystem integrating CPU, GPU, DMA, AI acceleration and OS hardware support.
 </p>
 
 <button onclick="openModal('images/coretrion_overall.png')">
@@ -1610,50 +905,148 @@ View Diagram
 
 </div>
 
+<div class="diagram-card">
+
+<img src="images/datapath.png">
+
+<div class="diagram-content">
+
+<h3>Processor Datapath</h3>
+
+<p>
+Integrated datapath architecture with MMU, ALU, SIMD, forwarding and writeback logic.
+</p>
+
+<button onclick="openModal('images/datapath.png')">
+View Diagram
+</button>
+
+</div>
+
+</div>
+
+<div class="diagram-card">
+
+<img src="images/gpu_architecture.png">
+
+<div class="diagram-content">
+
+<h3>GPU Architecture</h3>
+
+<p>
+GPU compute subsystem with shared memory, schedulers and SIMD execution.
+</p>
+
+<button onclick="openModal('images/gpu_architecture.png')">
+View Diagram
+</button>
+
+</div>
+
+</div>
+
+<div class="diagram-card">
+
+<img src="images/branch_prediction.png">
+
+<div class="diagram-content">
+
+<h3>Branch Prediction</h3>
+
+<p>
+Dynamic branch prediction and control-flow execution subsystem.
+</p>
+
+<button onclick="openModal('images/branch_prediction.png')">
+View Diagram
+</button>
+
+</div>
+
+</div>
+
+<div class="diagram-card">
+
+<img src="images/hazard_unit.png">
+
+<div class="diagram-content">
+
+<h3>Hazard Detection</h3>
+
+<p>
+Pipeline forwarding, flush control and RAW hazard handling logic.
+</p>
+
+<button onclick="openModal('images/hazard_unit.png')">
+View Diagram
+</button>
+
+</div>
+
+</div>
+
+<div class="diagram-card">
+
+<img src="images/kernel_user_mode.png">
+
+<div class="diagram-content">
+
+<h3>Kernel / User Mode</h3>
+
+<p>
+Privilege management and secure execution architecture.
+</p>
+
+<button onclick="openModal('images/kernel_user_mode.png')">
+View Diagram
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- ========================= -->
 <!-- TERMINAL -->
+<!-- ========================= -->
 
 <section>
 
 <div class="container">
 
 <h2 class="section-title">
-Development <span>Terminal</span>
+Semiconductor <span>Terminal</span>
 </h2>
 
 <div class="terminal">
 
 <div class="terminal-line">
-[INFO] Initializing CORETRION Hybrid Compute Pipeline...
+[INFO] Initializing CORETRION™ Custom Pipeline...
 </div>
 
 <div class="terminal-line">
-[INFO] Loading CHIPSETRON Peripheral Controllers...
+[INFO] Loading GPU Compute Scheduler...
 </div>
 
 <div class="terminal-line">
-[OK] RTL Simulation Active
+[INFO] AI Tensor Engine Ready...
 </div>
 
 <div class="terminal-line">
-[RUNNING] FPGA Validation
+[RUNNING] FPGA Validation Environment...
 </div>
 
 <div class="terminal-line">
-[RUNNING] GPU Compute Integration
+[RUNNING] CHIPSETRON™ Peripheral Integration...
 </div>
 
 <div class="terminal-line">
-[RUNNING] AI Accelerator Development
-</div>
-
-<div class="terminal-line">
-[RUNNING] MMU + Cache Optimization
+[OK] Execution Routing Pipeline Active
 </div>
 
 </div>
@@ -1662,173 +1055,174 @@ Development <span>Terminal</span>
 
 </section>
 
-<!-- ROADMAP -->
-
-<section id="roadmap">
-
-<div class="container">
-
-<h2 class="section-title">
-Development <span>Roadmap</span>
-</h2>
-
-<div class="roadmap">
-
-<div class="roadmap-card">
-
-<h3>
-2026 — RTL + FPGA Validation
-</h3>
-
-<p>
-
-Frontend RTL architecture, verification flow, FPGA prototyping and subsystem validation.
-
-</p>
-
-</div>
-
-<div class="roadmap-card">
-
-<h3>
-2027 — ASIC Readiness
-</h3>
-
-<p>
-
-Physical design flow, synthesis optimization, timing closure and GDSII preparation.
-
-</p>
-
-</div>
-
-<div class="roadmap-card">
-
-<h3>
-2028 — Multi-Core Compute Platform
-</h3>
-
-<p>
-
-Scalable multi-core architecture integrating AI acceleration and advanced memory systems.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
+<!-- ========================= -->
 <!-- FOOTER -->
+<!-- ========================= -->
 
 <footer>
 
-<img src="images/coretrion-logo.png">
+<img src="images/coretrion-logo.png" width="110">
 
 <h2>
 CORE<span>TRION</span>
 </h2>
 
 <p>
-
-CORETRION™ is an indigenous advanced compute architecture platform integrating intelligent execution pipelines, GPU acceleration, AI engines and embedded compute technologies.
-
+Advanced Intelligent Processor Architecture
 </p>
 
-<div class="footer-links">
-
-<a href="#">GitHub</a>
-<a href="#">LinkedIn</a>
-<a href="#">Documentation</a>
-
-</div>
+<p>
+CORETRION™ and CHIPSETRON™ represent a custom semiconductor compute architecture integrating intelligent execution routing, AI acceleration, GPU compute and embedded microcontroller systems.
+</p>
 
 <p style="margin-top:40px;">
-
-© 2026 CORETRION™ + CHIPSETRON™ • Designed in India
-
+© 2026 CORETRION™ • Designed in India
 </p>
 
 </footer>
 
+<!-- ========================= -->
 <!-- MODAL -->
+<!-- ========================= -->
 
-<div class="modal" id="imageModal">
+<div id="diagramModal" class="modal">
 
 <span class="close-modal" onclick="closeModal()">
 ×
 </span>
 
-<img id="modalImage">
+<img class="modal-content" id="modalImage">
 
 </div>
 
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
+
 <script>
 
+/* ========================= */
 /* LOADER */
+/* ========================= */
 
 let count = 0;
 
-const loading = setInterval(() => {
+let loader = setInterval(function(){
 
 count++;
 
-document.getElementById('loaderText').innerHTML = count + '%';
+document.getElementById("percent").innerHTML = count + "%";
 
 if(count >= 100){
 
-clearInterval(loading);
+clearInterval(loader);
 
-document.getElementById('loader').style.display = 'none';
+document.getElementById("loader").style.display = "none";
 
 }
 
 },15);
 
+/* ========================= */
 /* MOBILE MENU */
+/* ========================= */
 
-function openMenu(){
+function toggleMenu(){
 
-document.getElementById('mobileMenu').classList.add('active');
-
-}
-
-function closeMenu(){
-
-document.getElementById('mobileMenu').classList.remove('active');
+document.getElementById("mobileNav").classList.toggle("active");
 
 }
 
+/* ========================= */
 /* MODAL */
+/* ========================= */
 
-function openModal(img){
+function openModal(imageSrc){
 
-document.getElementById('imageModal').style.display='block';
+document.getElementById("diagramModal").style.display = "block";
 
-document.getElementById('modalImage').src=img;
+document.getElementById("modalImage").src = imageSrc;
 
 }
 
 function closeModal(){
 
-document.getElementById('imageModal').style.display='none';
+document.getElementById("diagramModal").style.display = "none";
 
 }
 
-window.onclick = function(e){
+window.onclick = function(event){
 
-const modal = document.getElementById('imageModal');
+const modal = document.getElementById("diagramModal");
 
-if(e.target == modal){
+if(event.target == modal){
 
-modal.style.display='none';
+modal.style.display = "none";
+
+}
 
 }
 
+/* ========================= */
+/* COUNTER ANIMATION */
+/* ========================= */
+
+const counters = document.querySelectorAll('.counter');
+
+const speed = 120;
+
+const startCounting = () => {
+
+counters.forEach(counter => {
+
+const updateCount = () => {
+
+const target = +counter.getAttribute('data-target');
+
+const count = +counter.innerText;
+
+const increment = Math.ceil(target / speed);
+
+if(count < target){
+
+counter.innerText = count + increment;
+
+setTimeout(updateCount,15);
+
 }
+else{
+
+counter.innerText = target;
+
+}
+
+};
+
+updateCount();
+
+});
+
+};
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+startCounting();
+
+observer.disconnect();
+
+}
+
+});
+
+},{
+threshold:0.5
+});
+
+observer.observe(document.querySelector('.stats-grid'));
 
 </script>
 
